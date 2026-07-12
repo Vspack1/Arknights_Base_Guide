@@ -1,0 +1,393 @@
+{
+  "_meta": {
+    "note": "Seed database - danh sách operator liên quan RIIC phổ biến nhất. KHÔNG đầy đủ 100% (Arknights có 300+ operator và base skill được buff định kỳ). Hãy đối chiếu PRTS.wiki / GamePress trước khi dùng để ra quyết định nâng cấp lớn. Đóng góp thêm operator bằng cách thêm object mới vào mảng operators theo đúng schema.",
+    "schema_version": "1.0",
+    "last_reviewed": "2026-07 (theo kiến thức huấn luyện, có thể lệch so với bản game mới nhất)"
+  },
+  "operators": [
+    {
+      "name": "Texas",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "texas_s2",
+          "name": "Trade Partner",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng tốc độ sản xuất đơn hàng Trading Post",
+          "value_pct": 45,
+          "combo_tags": ["texas_tp_core"]
+        }
+      ]
+    },
+    {
+      "name": "Vermeil",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "vermeil_s1",
+          "name": "Radiant Whistle",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Tăng tốc độ đơn hàng Trading Post, cộng dồn với operator khác cùng phòng",
+          "value_pct": 30,
+          "combo_tags": ["texas_tp_core"]
+        }
+      ]
+    },
+    {
+      "name": "Proviso",
+      "rarity": 6,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "proviso_s2",
+          "name": "Fill 'Er Up",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Nạp đầy kho chứa nguyên liệu Trading Post ngay lập tức khi kích hoạt (theo chu kỳ), giảm downtime",
+          "value_pct": 0,
+          "special": "instant_refill",
+          "combo_tags": ["proviso_refill_core"]
+        }
+      ]
+    },
+    {
+      "name": "Tequila",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "tequila_s2",
+          "name": "Wolf's Pursuit",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng tốc độ đơn hàng Trading Post khi kết hợp Proviso để duy trì buff liên tục",
+          "value_pct": 25,
+          "combo_tags": ["proviso_refill_core"]
+        }
+      ]
+    },
+    {
+      "name": "Bibeak",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "bibeak_s2",
+          "name": "Astute Prey",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Hỗ trợ duy trì tốc độ Trading Post trong combo Proviso-refill",
+          "value_pct": 20,
+          "combo_tags": ["proviso_refill_core"]
+        }
+      ]
+    },
+    {
+      "name": "Gravel",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "gravel_s1",
+          "name": "Warmth of the Family",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Tăng tốc độ hồi phục Morale cho các operator khác trong Dorm",
+          "value_pct": 60,
+          "combo_tags": ["dorm_morale_support"]
+        }
+      ]
+    },
+    {
+      "name": "Shamare",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "shamare_s2",
+          "name": "Lullaby",
+          "room": "Reception",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng tốc hồi Morale toàn base khi làm việc ở Reception Room, đổi lại giảm hiệu suất tiếp khách",
+          "value_pct": 0,
+          "special": "global_morale_regen",
+          "combo_tags": ["shamare_morale_core"]
+        }
+      ]
+    },
+    {
+      "name": "Scene",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "scene_s1",
+          "name": "Ward and Watch",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Tăng hiệu suất tiếp khách Reception, tăng tốc thu thập Clue/thông tin",
+          "value_pct": 25,
+          "combo_tags": ["reception_clue_core"]
+        }
+      ]
+    },
+    {
+      "name": "Bubble",
+      "rarity": 4,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "bubble_s1",
+          "name": "Guest From Afar",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Tăng tốc độ tiếp khách Reception Room",
+          "value_pct": 20,
+          "combo_tags": ["reception_clue_core"]
+        }
+      ]
+    },
+    {
+      "name": "Purestream",
+      "rarity": 4,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "purestream_s1",
+          "name": "Care and Nurture",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Tăng tốc hồi Morale cho toàn bộ Dorm nơi đặt",
+          "value_pct": 40,
+          "combo_tags": ["dorm_morale_support"]
+        }
+      ]
+    },
+    {
+      "name": "Quartz",
+      "rarity": 4,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "quartz_s1",
+          "name": "Insight",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Tăng tốc độ học kỹ năng trong Training Room",
+          "value_pct": 25,
+          "combo_tags": ["training_room_core"]
+        }
+      ]
+    },
+    {
+      "name": "Pudding",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "pudding_s2",
+          "name": "Elegant Reversal",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng sản lượng LMD Factory, tỉ lệ theo số operator cùng phòng",
+          "value_pct": 12,
+          "combo_tags": ["factory_gold_core"]
+        }
+      ]
+    },
+    {
+      "name": "Waai Fu",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "waaifu_s2",
+          "name": "Amemonoke",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng sản lượng Factory khi phối hợp cùng Pudding trong combo Factory-Gold",
+          "value_pct": 10,
+          "combo_tags": ["factory_gold_core"]
+        }
+      ]
+    },
+    {
+      "name": "Jaye",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "jaye_s2",
+          "name": "Full Firepower",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng sản lượng LMD Factory kèm hiệu ứng phụ trợ combo",
+          "value_pct": 10,
+          "combo_tags": ["factory_gold_core"]
+        }
+      ]
+    },
+    {
+      "name": "Kafka",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "kafka_s2",
+          "name": "Wingspan",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng sản lượng EXP-card / LMD Factory tuỳ chế phẩm được chọn",
+          "value_pct": 10,
+          "combo_tags": ["factory_gold_core", "factory_exp_core"]
+        }
+      ]
+    },
+    {
+      "name": "Podenco",
+      "rarity": 4,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "podenco_s1",
+          "name": "Vigor",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Tăng sản lượng điện Power Plant",
+          "value_pct": 20,
+          "combo_tags": ["power_plant_core"]
+        }
+      ]
+    },
+    {
+      "name": "Lancet-2",
+      "rarity": 1,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "lancet2_s1",
+          "name": "Emergency Rescue",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Giảm tiêu hao Morale cho operator cùng phòng Power Plant (filler rẻ, không tốn EXP nâng)",
+          "value_pct": 0,
+          "special": "morale_upkeep_reduction",
+          "combo_tags": ["power_plant_filler"]
+        }
+      ]
+    },
+    {
+      "name": "Castle-3",
+      "rarity": 1,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "castle3_s1",
+          "name": "Iron Wall",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "skill_slot": 1,
+          "module_required": null,
+          "effect": "Filler rẻ cho Factory, không có buff sản lượng đáng kể nhưng gần như miễn phí để nâng",
+          "value_pct": 0,
+          "special": "cheap_filler",
+          "combo_tags": ["factory_filler"]
+        }
+      ]
+    },
+    {
+      "name": "Orchid",
+      "rarity": 4,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "orchid_s2",
+          "name": "Spring's Grace",
+          "room": "Office",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng thu thập thông tin Office (Intel)",
+          "value_pct": 15,
+          "combo_tags": ["office_intel_core"]
+        }
+      ]
+    },
+    {
+      "name": "Mon3tr",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "mon3tr_s2",
+          "name": "Party Trick",
+          "room": "Office",
+          "elite_required": 1,
+          "level_required": 1,
+          "skill_slot": 2,
+          "module_required": null,
+          "effect": "Tăng thu thập thông tin Office, kèm hiệu ứng phụ ngẫu nhiên",
+          "value_pct": 20,
+          "combo_tags": ["office_intel_core"]
+        }
+      ]
+    }
+  ]
+}

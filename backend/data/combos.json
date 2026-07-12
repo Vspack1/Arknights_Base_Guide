@@ -1,0 +1,100 @@
+{
+  "combos": [
+    {
+      "tag": "texas_tp_core",
+      "name": "Texas + Vermeil (Trading Post tốc độ)",
+      "room": "TradingPost",
+      "description": "Texas S2M3 + Vermeil S1 cộng dồn tăng tốc độ ra đơn hàng Trading Post, không cần điều kiện đặc biệt ngoài elite.",
+      "min_operators": 1,
+      "notes": "Combo rẻ, không cần refill nguyên liệu liên tục như Proviso-refill. Phù hợp early/mid game."
+    },
+    {
+      "tag": "proviso_refill_core",
+      "name": "Proviso Refill Squad (Proviso + Tequila + Bibeak)",
+      "room": "TradingPost",
+      "description": "Proviso S2 refill tức thời kho nguyên liệu, kết hợp Tequila/Bibeak để duy trì tốc độ ra đơn liên tục không downtime.",
+      "min_operators": 2,
+      "notes": "Combo mạnh nhất Trading Post late/endgame nhưng cần Proviso E2 (chi phí LMD+Chip cao). Chỉ đáng nâng nếu chơi Trading Post tích cực."
+    },
+    {
+      "tag": "dorm_morale_support",
+      "name": "Dorm Morale Regen (Gravel/Purestream)",
+      "room": "Dorm",
+      "description": "Tăng tốc hồi Morale cho Dorm, giảm downtime chờ nghỉ.",
+      "min_operators": 1,
+      "notes": "Rất rẻ (Gravel E1, Purestream E0), gần như ai cũng nên dùng nếu có."
+    },
+    {
+      "tag": "shamare_morale_core",
+      "name": "Shamare Global Morale (Reception)",
+      "room": "Reception",
+      "description": "Shamare hi sinh hiệu suất tiếp khách để hồi Morale toàn base, hữu ích khi thiếu Trainer/Dorm slot.",
+      "min_operators": 1,
+      "notes": "Chỉ đáng dùng nếu base đang thiếu chỗ nghỉ (dorm ít) hơn là cần tối đa hoá Reception."
+    },
+    {
+      "tag": "reception_clue_core",
+      "name": "Reception Clue Speed (Scene/Bubble)",
+      "room": "Reception",
+      "description": "Tăng tốc thu thập Clue tại Reception Room.",
+      "min_operators": 1,
+      "notes": "Chi phí thấp, phù hợp mọi giai đoạn nếu cần nhiều Clue để trao đổi bạn bè."
+    },
+    {
+      "tag": "training_room_core",
+      "name": "Training Room Speed-up (Quartz)",
+      "room": "TrainingRoom",
+      "description": "Tăng tốc học kỹ năng ở Training Room.",
+      "min_operators": 1,
+      "notes": "Chỉ hữu ích nếu bạn thường xuyên transfer skill, không nên nâng riêng chỉ vì combo này."
+    },
+    {
+      "tag": "factory_gold_core",
+      "name": "Factory Gold Squad (Pudding/Waai Fu/Jaye/Kafka)",
+      "room": "Factory",
+      "description": "Tổ hợp tăng sản lượng LMD tại Factory, càng nhiều operator trong tag này càng cộng dồn cao.",
+      "min_operators": 1,
+      "notes": "Đây là combo lợi nhuận LMD ổn định nhất early-mid game. Ưu tiên nâng nếu đang thiếu LMD."
+    },
+    {
+      "tag": "factory_exp_core",
+      "name": "Factory EXP output",
+      "room": "Factory",
+      "description": "Một số base skill Factory có thể chọn output EXP-card thay vì LMD tuỳ chế phẩm chọn trong phòng.",
+      "min_operators": 1,
+      "notes": "Chỉ nên chuyển sang EXP nếu đang cần lên cấp nhiều operator, nếu không LMD thường lợi hơn theo giá trị quy đổi."
+    },
+    {
+      "tag": "power_plant_core",
+      "name": "Power Plant Output (Podenco)",
+      "room": "PowerPlant",
+      "description": "Tăng sản lượng điện, cho phép mở thêm phòng hoặc giảm số operator cần đặt ở Power Plant.",
+      "min_operators": 1,
+      "notes": "Hữu ích nếu điện đang là bottleneck của base (nhiều phòng cấp cao)."
+    },
+    {
+      "tag": "power_plant_filler",
+      "name": "Power Plant Cheap Filler (Lancet-2)",
+      "room": "PowerPlant",
+      "description": "Operator rẻ để lấp chỗ trống Power Plant mà không tốn tài nguyên nâng cấp.",
+      "min_operators": 1,
+      "notes": "Không phải combo lợi nhuận, chỉ là filler tiết kiệm tài nguyên."
+    },
+    {
+      "tag": "factory_filler",
+      "name": "Factory Cheap Filler (Castle-3)",
+      "room": "Factory",
+      "description": "Filler rẻ cho Factory khi chưa có operator sản lượng cao.",
+      "min_operators": 1,
+      "notes": "Dùng tạm cho newbie, nên thay thế khi có Pudding/Waai Fu/Jaye/Kafka."
+    },
+    {
+      "tag": "office_intel_core",
+      "name": "Office Intel Squad (Orchid/Mon3tr)",
+      "room": "Office",
+      "description": "Tăng tốc thu thập thông tin (Intel) ở Office.",
+      "min_operators": 1,
+      "notes": "Hữu ích nếu cần nhiều Intel để đổi LMD/vật phẩm ở Intelligence Shop."
+    }
+  ]
+}
