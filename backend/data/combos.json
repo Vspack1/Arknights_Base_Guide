@@ -1,100 +1,127 @@
 {
+  "_meta": {
+    "note": "Combo definitions khớp với combo_tags gán trong operators.json (đã xác minh với data thật từ Dimbreath/ArknightsData snapshot). Một số combo nổi tiếng cộng đồng hay nhắc (Proviso Refill, Quartz, Pudding...) chưa có vì operator đó chưa tồn tại trong snapshot data — cần thêm thủ công nếu sở hữu, xem README."
+  },
   "combos": [
     {
-      "tag": "texas_tp_core",
-      "name": "Texas + Vermeil (Trading Post tốc độ)",
+      "tag": "texas_lappland_pair",
+      "name": "Texas + Lappland (Trading Post)",
       "room": "TradingPost",
-      "description": "Texas S2M3 + Vermeil S1 cộng dồn tăng tốc độ ra đơn hàng Trading Post, không cần điều kiện đặc biệt ngoài elite.",
+      "description": "Texas S2 (Feud) kích hoạt khi đứng cùng Trading Post với Lappland: giảm tiêu hao Morale/giờ và tăng mạnh hiệu suất nhận đơn hàng.",
       "min_operators": 1,
-      "notes": "Combo rẻ, không cần refill nguyên liệu liên tục như Proviso-refill. Phù hợp early/mid game."
+      "notes": "Cần SỞ HỮU CẢ Lappland để buff kích hoạt (buff điều kiện theo tên operator cụ thể, không phải chỉ cần Texas). Texas còn có S1 cần Exusiai đứng cùng để giảm tiêu hao Morale."
     },
     {
-      "tag": "proviso_refill_core",
-      "name": "Proviso Refill Squad (Proviso + Tequila + Bibeak)",
+      "tag": "vermeil_factory_core",
+      "name": "Vermeil Factory Support",
+      "room": "Factory",
+      "description": "Vermeil tăng capacity limit + giảm tiêu hao Morale cho Factory (S1), và tăng productivity cho cả phòng khi lên E1 (S2).",
+      "min_operators": 1,
+      "notes": "Không cần operator đi kèm cụ thể, chỉ cần bản thân Vermeil đủ elite."
+    },
+    {
+      "tag": "bibeak_precious_metal",
+      "name": "Bibeak Precious Metal Trading",
       "room": "TradingPost",
-      "description": "Proviso S2 refill tức thời kho nguyên liệu, kết hợp Tequila/Bibeak để duy trì tốc độ ra đơn liên tục không downtime.",
+      "description": "Tăng tỉ lệ nhận đơn hàng Precious Metal (giá trị cao) tại Trading Post, mạnh hơn khi Elite 2.",
+      "min_operators": 1,
+      "notes": "Không cần operator đi kèm, chỉ cần Bibeak E2 để có bản buff mạnh (β)."
+    },
+    {
+      "tag": "gravel_precious_metal",
+      "name": "Gravel Precious Metal Factory",
+      "room": "Factory",
+      "description": "Gravel S2 (E1) tăng năng suất công thức liên quan Precious Metal tại Factory +35%.",
+      "min_operators": 1,
+      "notes": "S1 (Workshop, E0) là buff riêng biệt không liên quan combo Factory này."
+    },
+    {
+      "tag": "shamare_solo_trading",
+      "name": "Shamare Solo Trading Post",
+      "room": "TradingPost",
+      "description": "Shamare S2 (E2): hiệu suất nhận đơn của các operator khác trong phòng bị đưa về 0, nhưng bù lại tăng rất mạnh hiệu suất cho chính Shamare — phù hợp khi để Shamare đứng một mình trong Trading Post.",
+      "min_operators": 1,
+      "notes": "Đây là kiểu combo 'độc chiếm phòng' — không kết hợp thêm operator khác trong cùng Trading Post đó."
+    },
+    {
+      "tag": "scene_factory_ramp",
+      "name": "Scene Factory Ramp-up",
+      "room": "Factory",
+      "description": "Scene S1: năng suất Factory +15% giờ đầu, sau đó +2%/giờ, tối đa +25%.",
+      "min_operators": 1,
+      "notes": "Hiệu quả tăng dần theo thời gian, phù hợp ca làm dài."
+    },
+    {
+      "tag": "bubble_factory_capacity",
+      "name": "Bubble Factory Capacity",
+      "room": "Factory",
+      "description": "Bubble tăng capacity limit Factory (S1) và tăng năng suất toàn phòng dựa trên capacity limit tăng thêm (S2, E1).",
+      "min_operators": 1,
+      "notes": "Không cần operator đi kèm cụ thể."
+    },
+    {
+      "tag": "purestream_power_drone",
+      "name": "Purestream Power Plant Drone Recovery",
+      "room": "PowerPlant",
+      "description": "Purestream S1: tăng tốc độ hồi phục drone +15% khi đặt tại Power Plant.",
+      "min_operators": 1,
+      "notes": "Rẻ (E0), phù hợp early game khi chưa có nhiều lựa chọn Power Plant."
+    },
+    {
+      "tag": "waaifu_factory_stack",
+      "name": "Waai Fu Factory Stack",
+      "room": "Factory",
+      "description": "Waai Fu S2 (E2): cộng thêm 5% năng suất cho mỗi 5% năng suất mà các operator khác trong Factory đang đóng góp — càng nhiều operator buff cao trong phòng, Waai Fu càng mạnh.",
       "min_operators": 2,
-      "notes": "Combo mạnh nhất Trading Post late/endgame nhưng cần Proviso E2 (chi phí LMD+Chip cao). Chỉ đáng nâng nếu chơi Trading Post tích cực."
+      "notes": "Cần ít nhất 1 operator buff-Factory khác (Vermeil, Bubble, Scene, Gravel...) đứng cùng để phát huy tối đa."
     },
     {
-      "tag": "dorm_morale_support",
-      "name": "Dorm Morale Regen (Gravel/Purestream)",
+      "tag": "jaye_trading_swing",
+      "name": "Jaye Trading Swing",
+      "room": "TradingPost",
+      "description": "Jaye S1: hiệu suất nhận đơn tăng theo chênh lệch số đơn hàng hiện có so với ngưỡng — phù hợp chiến thuật để kho gần trống rồi thu hoạch.",
+      "min_operators": 1,
+      "notes": "Cần theo dõi/canh thời điểm thu hoạch để tối ưu, không phải buff 'đặt rồi quên'."
+    },
+    {
+      "tag": "kafka_precious_metal",
+      "name": "Kafka Precious Metal Trading",
+      "room": "TradingPost",
+      "description": "Tăng tỉ lệ nhận đơn hàng Precious Metal tại Trading Post, mạnh hơn ở Elite 2 (bản β).",
+      "min_operators": 1,
+      "notes": "Cùng nhóm hiệu ứng với Bibeak — không cộng dồn nếu đứng chung phòng, ưu tiên chọn 1 trong 2."
+    },
+    {
+      "tag": "podenco_dorm_group",
+      "name": "Podenco Dorm Group Regen",
       "room": "Dorm",
-      "description": "Tăng tốc hồi Morale cho Dorm, giảm downtime chờ nghỉ.",
+      "description": "Podenco S2 (E1): hồi Morale +0.15/giờ cho TẤT CẢ operator trong Dorm đó (khác với S1 chỉ hồi cho 1 người khác).",
       "min_operators": 1,
-      "notes": "Rất rẻ (Gravel E1, Purestream E0), gần như ai cũng nên dùng nếu có."
+      "notes": "S2 hiệu quả hơn khi Dorm đông người; S1 hiệu quả hơn khi chỉ có 1-2 operator khác cần hồi nhanh."
     },
     {
-      "tag": "shamare_morale_core",
-      "name": "Shamare Global Morale (Reception)",
-      "room": "Reception",
-      "description": "Shamare hi sinh hiệu suất tiếp khách để hồi Morale toàn base, hữu ích khi thiếu Trainer/Dorm slot.",
+      "tag": "lancet2_dorm_filler",
+      "name": "Lancet-2 Dorm Cheap Filler",
+      "room": "Dorm",
+      "description": "Lancet-2 S2 (level 30, không cần elite): hồi Morale +0.65/giờ cho 1 operator khác trong Dorm — chi phí gần như miễn phí (1-star, chỉ cần lên level 30).",
       "min_operators": 1,
-      "notes": "Chỉ đáng dùng nếu base đang thiếu chỗ nghỉ (dorm ít) hơn là cần tối đa hoá Reception."
+      "notes": "Filler rẻ nhất game cho Dorm, gần như ai mới chơi cũng nên dùng ngay khi có Lancet-2."
     },
     {
-      "tag": "reception_clue_core",
-      "name": "Reception Clue Speed (Scene/Bubble)",
-      "room": "Reception",
-      "description": "Tăng tốc thu thập Clue tại Reception Room.",
-      "min_operators": 1,
-      "notes": "Chi phí thấp, phù hợp mọi giai đoạn nếu cần nhiều Clue để trao đổi bạn bè."
-    },
-    {
-      "tag": "training_room_core",
-      "name": "Training Room Speed-up (Quartz)",
-      "room": "TrainingRoom",
-      "description": "Tăng tốc học kỹ năng ở Training Room.",
-      "min_operators": 1,
-      "notes": "Chỉ hữu ích nếu bạn thường xuyên transfer skill, không nên nâng riêng chỉ vì combo này."
-    },
-    {
-      "tag": "factory_gold_core",
-      "name": "Factory Gold Squad (Pudding/Waai Fu/Jaye/Kafka)",
+      "tag": "castle3_factory_battlerecord",
+      "name": "Castle-3 Battle Record Factory",
       "room": "Factory",
-      "description": "Tổ hợp tăng sản lượng LMD tại Factory, càng nhiều operator trong tag này càng cộng dồn cao.",
+      "description": "Castle-3 S2 (level 30, không cần elite): tăng năng suất công thức Battle Record +30% tại Factory — rẻ, phù hợp cày EXP-card sớm game.",
       "min_operators": 1,
-      "notes": "Đây là combo lợi nhuận LMD ổn định nhất early-mid game. Ưu tiên nâng nếu đang thiếu LMD."
+      "notes": "Chỉ tăng công thức Battle Record (EXP), không tăng LMD/Precious Metal."
     },
     {
-      "tag": "factory_exp_core",
-      "name": "Factory EXP output",
-      "room": "Factory",
-      "description": "Một số base skill Factory có thể chọn output EXP-card thay vì LMD tuỳ chế phẩm chọn trong phòng.",
+      "tag": "orchid_trading_secondary",
+      "name": "Orchid Office + Trading Post",
+      "room": "TradingPost",
+      "description": "Orchid S1 (Office, E0): tăng tốc tuyển dụng HR +40%. S2 (Trading Post, E1): tăng hiệu suất nhận đơn +25% và +1 order limit.",
       "min_operators": 1,
-      "notes": "Chỉ nên chuyển sang EXP nếu đang cần lên cấp nhiều operator, nếu không LMD thường lợi hơn theo giá trị quy đổi."
-    },
-    {
-      "tag": "power_plant_core",
-      "name": "Power Plant Output (Podenco)",
-      "room": "PowerPlant",
-      "description": "Tăng sản lượng điện, cho phép mở thêm phòng hoặc giảm số operator cần đặt ở Power Plant.",
-      "min_operators": 1,
-      "notes": "Hữu ích nếu điện đang là bottleneck của base (nhiều phòng cấp cao)."
-    },
-    {
-      "tag": "power_plant_filler",
-      "name": "Power Plant Cheap Filler (Lancet-2)",
-      "room": "PowerPlant",
-      "description": "Operator rẻ để lấp chỗ trống Power Plant mà không tốn tài nguyên nâng cấp.",
-      "min_operators": 1,
-      "notes": "Không phải combo lợi nhuận, chỉ là filler tiết kiệm tài nguyên."
-    },
-    {
-      "tag": "factory_filler",
-      "name": "Factory Cheap Filler (Castle-3)",
-      "room": "Factory",
-      "description": "Filler rẻ cho Factory khi chưa có operator sản lượng cao.",
-      "min_operators": 1,
-      "notes": "Dùng tạm cho newbie, nên thay thế khi có Pudding/Waai Fu/Jaye/Kafka."
-    },
-    {
-      "tag": "office_intel_core",
-      "name": "Office Intel Squad (Orchid/Mon3tr)",
-      "room": "Office",
-      "description": "Tăng tốc thu thập thông tin (Intel) ở Office.",
-      "min_operators": 1,
-      "notes": "Hữu ích nếu cần nhiều Intel để đổi LMD/vật phẩm ở Intelligence Shop."
+      "notes": "Operator linh hoạt 2 phòng khác nhau tuỳ elite — 3-star nên chi phí nâng rất rẻ."
     }
   ]
 }

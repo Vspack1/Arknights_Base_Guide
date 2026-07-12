@@ -1,313 +1,2468 @@
 {
   "_meta": {
-    "note": "Seed database - danh sách operator liên quan RIIC phổ biến nhất. KHÔNG đầy đủ 100% (Arknights có 300+ operator và base skill được buff định kỳ). Hãy đối chiếu PRTS.wiki / GamePress trước khi dùng để ra quyết định nâng cấp lớn. Đóng góp thêm operator bằng cách thêm object mới vào mảng operators theo đúng schema.",
-    "schema_version": "1.0",
-    "last_reviewed": "2026-07 (theo kiến thức huấn luyện, có thể lệch so với bản game mới nhất)"
+    "note": "Auto-generated from Dimbreath/ArknightsData (en-US, archived snapshot). Covers operators released up to the archive date only -- newer operators (e.g. Proviso, Tequila, Quartz, Pudding) are NOT included and must be added manually. combo_tags are hand-curated (keyed by buffId) only for operators referenced in combos.json; most operators have empty combo_tags (raw data only).",
+    "source": "https://github.com/Dimbreath/ArknightsData (archived), building_data.json + character_table.json",
+    "generated_by": "backend/tools/generate_operators.py",
+    "operator_count": 192
   },
   "operators": [
     {
-      "name": "Texas",
+      "name": "12F",
+      "rarity": 2,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "meet_spd[001]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[300]",
+          "name": "Training Record",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to the Workshop to process Chips, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Aak",
+      "rarity": 6,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "control_clue_cost[000]",
+          "name": "Neuroticism",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases the likelihood of obtaining Clues corresponding to the factions of Operators assigned to the Reception Room, but greatly increases the Morale consumption of Operators assigned to the Control Center",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[170]",
+          "name": "Surgical Precision",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Medic Operators' Specialization training speed +60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Absinthe",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "meet_team[050]",
+          "name": "Secret Inquiry",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining Ursus Student Self-Governing Group clues (Working time affects the likelihood).",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_flag[050]",
+          "name": "Screening",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining Ursus Student Self-Governing Group clues for every newly-obtained clue that is not from Ursus Student Self-Governing Group (Working time affects the likelihood).",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Aciddrop",
+      "rarity": 4,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "hire_spd[031]",
+          "name": "B-girl",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +40%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[012]",
+          "name": "Give me five",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.35 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.35",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Adnachiel",
+      "rarity": 3,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "trade_ord_spd[000]",
+          "name": "Order Distribution α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_proc_probability[010]",
+          "name": "Skillful Craftsman",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Akafuyu",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
         {
-          "id": "texas_s2",
-          "name": "Trade Partner",
-          "room": "TradingPost",
+          "id": "train_spd&profession2[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[220]",
+          "name": "Nobukage-ryu",
+          "room": "TrainingRoom",
           "elite_required": 2,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng tốc độ sản xuất đơn hàng Trading Post",
-          "value_pct": 45,
-          "combo_tags": ["texas_tp_core"]
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%; if training this skill to Specialization Level 1, training speed will be further increased by +45%",
+          "combo_tags": []
         }
       ]
     },
     {
-      "name": "Vermeil",
-      "rarity": 6,
-      "profession": "Guard",
+      "name": "Ambriel",
+      "rarity": 4,
+      "profession": "Sniper",
       "skills": [
         {
-          "id": "vermeil_s1",
-          "name": "Radiant Whistle",
+          "id": "dorm_rec_all&oneself[000]",
+          "name": "Laziness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered per hour -0.1, but restores +0.2 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
           "room": "TradingPost",
           "elite_required": 1,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Tăng tốc độ đơn hàng Trading Post, cộng dồn với operator khác cùng phòng",
-          "value_pct": 30,
-          "combo_tags": ["texas_tp_core"]
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30%",
+          "combo_tags": []
         }
       ]
     },
     {
-      "name": "Proviso",
+      "name": "Amiya",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "control_tra_spd[000]",
+          "name": "Agreement",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, all Trading Posts' order efficiency +7% (only the most effective one will take effect when assigned Operators have the same skill effect)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all[010]",
+          "name": "Violin Solo",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.15 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Andreana",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself[011]",
+          "name": "Hard to Avoid",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.85 per hour",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Angelina",
+      "rarity": 6,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "meet_spd&team[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[060]",
+          "name": "Messenger - Rhodes Island Pharmaceuticals",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Rhodes Island",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ansel",
+      "rarity": 3,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "dorm_rec_single[010]",
+          "name": "Thoughtfulness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[110]",
+          "name": "Pharmacology·α",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Aosta",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "workshop_formula_cost3[110]",
+          "name": "Inspiration",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, reduces the Morale consumed by all corresponding formulas that cost 4 Morale by -1",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_device[030]",
+          "name": "DIY Polyester",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Ester-type materials, increases the byproduct production rate by 90%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "April",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[000]",
+          "name": "Order Management α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +10% and the order limit +2",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[001]",
+          "name": "Order Management β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +10% and the order limit +4",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all[000]",
+          "name": "Inspiration",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.1 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Archetto",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
         {
-          "id": "proviso_s2",
-          "name": "Fill 'Er Up",
+          "id": "trade_ord_spd&dorm&lv[000]",
+          "name": "Pious Fundraising α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +1% for every level of each Dormitory",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&dorm&lv[010]",
+          "name": "Pious Fundraising β",
           "room": "TradingPost",
           "elite_required": 2,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Nạp đầy kho chứa nguyên liệu Trading Post ngay lập tức khi kích hoạt (theo chu kỳ), giảm downtime",
-          "value_pct": 0,
-          "special": "instant_refill",
-          "combo_tags": ["proviso_refill_core"]
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +2% for every level of each Dormitory",
+          "combo_tags": []
         }
       ]
     },
     {
-      "name": "Tequila",
+      "name": "Arene",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "workshop_formula_dorm[000]",
+          "name": "Waste Not, Want Not",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, increases the byproduct production rate by 5% for every 1 Operator with 4 or less Morale assigned to the Dorms",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_dorm[001]",
+          "name": "Everyone Does Their Part",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, increases the byproduct production rate by 5% for every 1 Operator with 20 or less Morale assigned to the Dorms",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself2[000]",
+          "name": "Searching for Solitude",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, increases own Morale restored per hour by +0.7; If there are other Operators in that Dormitory, further increases own Morale restored per hour by +0.05 for each additional Operator.",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Asbestos",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "manu_prod_spd&limit&cost[011]",
+          "name": "Maverick",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%, capacity limit -12, and Morale consumed per hour +0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_limit&cost[020]",
+          "name": "Explorer",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +16 and Morale consumed per hour -0.25",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ash",
+      "rarity": 6,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "control_mp_cost&faction[990]",
+          "name": "Team Rainbow",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Operator from Team Rainbow increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_bd[000]",
+          "name": "Intelligence Reserve",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, for each Team Rainbow Operator, Intelligence Reserve+1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Astesia",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
         {
-          "id": "tequila_s2",
-          "name": "Wolf's Pursuit",
-          "room": "TradingPost",
+          "id": "meet_spd&team[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng tốc độ đơn hàng Trading Post khi kết hợp Proviso để duy trì buff liên tục",
-          "value_pct": 25,
-          "combo_tags": ["proviso_refill_core"]
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[110]",
+          "name": "Astrology",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ayerscarpe",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "meet_spd[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd[001]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Bagpipe",
+      "rarity": 6,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "dorm_rec_all&oneself[021]",
+          "name": "Madrigal",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered per hour +0.55, and restores +0.1 Morale per hour to all other Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[310]",
+          "name": "Well-Trained",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Chips, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Beagle",
+      "rarity": 3,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "manu_prod_spd&limit[000]",
+          "name": "Warehouse Organization α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +6 and productivity +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[000]",
+          "name": "Liveliness",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.2 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.4",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Beanstalk",
+      "rarity": 4,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "manu_prod_spd[002]",
+          "name": "Metal Crab - Peacake",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +15%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_limit&cost[001]",
+          "name": "Metal Crab - Trey",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +8 and Morale consumed per hour -0.25",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Beehunter",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "train_spd&profession[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[300]",
+          "name": "Training Record",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Chips, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Beeswax",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "train_spd&profession[050]",
+          "name": "Caster Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Caster Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[051]",
+          "name": "Caster Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Caster Operators' Specialization training speed +50%",
+          "combo_tags": []
         }
       ]
     },
     {
       "name": "Bibeak",
       "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "trade_ord_wt&cost[000]",
+          "name": "Tailoring α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, the chance of getting higher-yield Precious Metal orders is increased slightly (rate is influenced by length of work time), and Morale consumed per hour is reduced by -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_wt&cost[010]",
+          "name": "Tailoring β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, the chance of getting higher-yield Precious Metal orders is increased (rate is influenced by length of work time), and Morale consumed per hour is reduced by -0.25",
+          "combo_tags": [
+            "bibeak_precious_metal"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bison",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[032]",
+          "name": "MountainDash Logistics",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[033]",
+          "name": "Young Master",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30% and the order limit +1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Blaze",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "power_rec_spd[001]",
+          "name": "Heat Charge α",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[210]",
+          "name": "Slice Iron, Split Steel",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Building material, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Blemishine",
+      "rarity": 6,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "workshop_formula_free[000]",
+          "name": "Careful Planning",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, reduces the LMD cost.",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_cost2[000]",
+          "name": "Passionate Tinker",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, increases the byproduct production rate by 40%, and decreases the Morale consumption of recipes that cost 8 Morale or more by -4",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Blitz",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "control_mp_cost&faction[990]",
+          "name": "Team Rainbow",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Operator from Team Rainbow increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd_blitz[000]",
+          "name": "Linguistics",
+          "room": "Office",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed+20%; every 1 points of Intelligence Reserve adds extra contacting speed +5%; every 1 bottles of Ursus Specialty Beverage, adds extra contacting speed +5%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Blue Poison",
+      "rarity": 5,
       "profession": "Sniper",
       "skills": [
         {
-          "id": "bibeak_s2",
-          "name": "Astute Prey",
-          "room": "TradingPost",
-          "elite_required": 1,
-          "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Hỗ trợ duy trì tốc độ Trading Post trong combo Proviso-refill",
-          "value_pct": 20,
-          "combo_tags": ["proviso_refill_core"]
-        }
-      ]
-    },
-    {
-      "name": "Gravel",
-      "rarity": 4,
-      "profession": "Guard",
-      "skills": [
-        {
-          "id": "gravel_s1",
-          "name": "Warmth of the Family",
-          "room": "Dorm",
+          "id": "workshop_formula_probability[120]",
+          "name": "Toxicology α",
+          "room": "Workshop",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Tăng tốc độ hồi phục Morale cho các operator khác trong Dorm",
-          "value_pct": 60,
-          "combo_tags": ["dorm_morale_support"]
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[121]",
+          "name": "Toxicology β",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 80%",
+          "combo_tags": []
         }
       ]
     },
     {
-      "name": "Shamare",
+      "name": "Breeze",
       "rarity": 5,
-      "profession": "Caster",
+      "profession": "Medic",
       "skills": [
         {
-          "id": "shamare_s2",
-          "name": "Lullaby",
+          "id": "meet_spd&team[000]",
+          "name": "Clue Search α",
           "room": "Reception",
-          "elite_required": 1,
+          "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng tốc hồi Morale toàn base khi làm việc ở Reception Room, đổi lại giảm hiệu suất tiếp khách",
-          "value_pct": 0,
-          "special": "global_morale_regen",
-          "combo_tags": ["shamare_morale_core"]
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[071]",
+          "name": "Fallen Noble",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Glasgow",
+          "combo_tags": []
         }
       ]
     },
     {
-      "name": "Scene",
-      "rarity": 4,
+      "name": "Broca",
+      "rarity": 5,
       "profession": "Guard",
       "skills": [
         {
-          "id": "scene_s1",
-          "name": "Ward and Watch",
-          "room": "Reception",
+          "id": "train_spd&profession[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Tăng hiệu suất tiếp khách Reception, tăng tốc thu thập Clue/thông tin",
-          "value_pct": 25,
-          "combo_tags": ["reception_clue_core"]
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[021]",
+          "name": "Guard Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +50%",
+          "combo_tags": []
         }
       ]
     },
     {
       "name": "Bubble",
       "rarity": 4,
-      "profession": "Vanguard",
+      "profession": "Defender",
       "skills": [
         {
-          "id": "bubble_s1",
-          "name": "Guest From Afar",
-          "room": "Reception",
+          "id": "manu_prod_limit&cost[010]",
+          "name": "Hoarder",
+          "room": "Factory",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Tăng tốc độ tiếp khách Reception Room",
-          "value_pct": 20,
-          "combo_tags": ["reception_clue_core"]
+          "effect": "When this Operator is assigned to a Factory, capacity limit +10 and Morale consumed per hour -0.25",
+          "combo_tags": [
+            "bubble_factory_capacity"
+          ]
+        },
+        {
+          "id": "manu_prod_spd_variable3[000]",
+          "name": "Bigger is Better!",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, increases the productivity of Operators in that Factory based upon their increased capacity limit. Operators with 18 or less increased capacity limit gain 1% productivity; Operators with greater than 18 increased capacity limit gain 3% productivity (This effect does not stack with Recycling and takes priority over it).",
+          "combo_tags": [
+            "bubble_factory_capacity"
+          ]
         }
       ]
     },
     {
-      "name": "Purestream",
-      "rarity": 4,
+      "name": "Cardigan",
+      "rarity": 3,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "manu_prod_spd&limit[000]",
+          "name": "Warehouse Organization α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +6 and productivity +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[000]",
+          "name": "Liveliness",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.2 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.4",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Castle-3",
+      "rarity": 1,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "power_rec_spd[000]",
+          "name": "Backup Energy",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[000]",
+          "name": "Combat Guidance Video",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to a Factory, Battle Record formula related productivity +30%",
+          "combo_tags": [
+            "castle3_factory_battlerecord"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Catapult",
+      "rarity": 3,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "trade_ord_spd&cost[000]",
+          "name": "Communication",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30% and Morale consumed per hour -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[131]",
+          "name": "Blasting Materiology β",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ceobe",
+      "rarity": 6,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "manu_prod_limit&cost[002]",
+          "name": "I Want It All",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +8 and Morale consumed per hour -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd_addition[031]",
+          "name": "Right Now",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +20% in the first hour and thereafter +1% per hour, up to +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ceylon",
+      "rarity": 5,
       "profession": "Medic",
       "skills": [
         {
-          "id": "purestream_s1",
-          "name": "Care and Nurture",
-          "room": "Dorm",
+          "id": "workshop_formula_probability[101]",
+          "name": "Scholar",
+          "room": "Workshop",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Tăng tốc hồi Morale cho toàn bộ Dorm nơi đặt",
-          "value_pct": 40,
-          "combo_tags": ["dorm_morale_support"]
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[212]",
+          "name": "Originium Study",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Originium formula related productivity +35%",
+          "combo_tags": []
         }
       ]
     },
     {
-      "name": "Quartz",
+      "name": "Ch'en",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "control_mp_cost&faction[000]",
+          "name": "Integrity & Capability",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Operator from Lungmen Guard Department increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[100]",
+          "name": "Police Superintendent",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Chiave",
+      "rarity": 5,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "workshop_formula_cost3[110]",
+          "name": "Inspiration",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, reduces the Morale consumed by all corresponding formulas that cost 4 Morale by -1",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_device[000]",
+          "name": "DIY Installation",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Device-type materials, increases the byproduct production rate by 90%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Click",
       "rarity": 4,
       "profession": "Caster",
       "skills": [
         {
-          "id": "quartz_s1",
-          "name": "Insight",
-          "room": "TrainingRoom",
+          "id": "manu_formula_cost[000]",
+          "name": "Vlog",
+          "room": "Factory",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Tăng tốc độ học kỹ năng trong Training Room",
-          "value_pct": 25,
-          "combo_tags": ["training_room_core"]
-        }
-      ]
-    },
-    {
-      "name": "Pudding",
-      "rarity": 5,
-      "profession": "Supporter",
-      "skills": [
+          "effect": "When this Operator is assigned to a Factory, the Morale consumed when producing Battle Records is reduced by -0.25",
+          "combo_tags": []
+        },
         {
-          "id": "pudding_s2",
-          "name": "Elegant Reversal",
+          "id": "manu_formula_limit[010]",
+          "name": "Editing β",
           "room": "Factory",
           "elite_required": 1,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng sản lượng LMD Factory, tỉ lệ theo số operator cùng phòng",
-          "value_pct": 12,
-          "combo_tags": ["factory_gold_core"]
+          "effect": "When this Operator is assigned to a Factory, capacity limit is increased by +15 when producing Battle Records",
+          "combo_tags": []
         }
       ]
     },
     {
-      "name": "Waai Fu",
+      "name": "Cliffheart",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "dorm_rec_single&oneself[001]",
+          "name": "Explorer's Passion",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.25 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.5",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[021]",
+          "name": "Karlan Commercial β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +15% and the order limit +4",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Conviction",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "dorm_rec_single[030]",
+          "name": "Apocalypse",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.7 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[001]",
+          "name": "Boxing Guidance Video",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Battle Record formula related productivity +35%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Courier",
+      "rarity": 4,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[020]",
+          "name": "Karlan Commercial α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +15% and the order limit +2",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[040]",
+          "name": "Courier",
+          "room": "Reception",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Karlan Commercial",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Croissant",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[030]",
+          "name": "Penguin Logistics α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[031]",
+          "name": "Mission Guarantee",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30% and the order limit +1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Cuora",
+      "rarity": 4,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "manu_prod_spd&limit[001]",
+          "name": "Warehouse Organization β",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +10 and productivity +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[000]",
+          "name": "Order Distribution α",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Cutter",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[300]",
+          "name": "Training Record",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Chips, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_cost3[300]",
+          "name": "Asceticism",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Chips, reduces the Morale consumed by all corresponding formulas that cost 2 Morale by -1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Deepcolor",
+      "rarity": 4,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "trade_ord_spd[000]",
+          "name": "Order Distribution α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_proc_probability[020]",
+          "name": "Focus β",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Dobermann",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "control_mp_cost[000]",
+          "name": "Capable Assistance",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd[000]",
+          "name": "Drillmaster",
+          "room": "TrainingRoom",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Dur-nar",
+      "rarity": 4,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "train_spd&profession[030]",
+          "name": "Defender Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Defender Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_cost[002]",
+          "name": "Snack Network",
+          "room": "Control",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Durin",
+      "rarity": 2,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "dorm_rec_all&oneself[000]",
+          "name": "Laziness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered per hour -0.1, but restores +0.2 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all&oneself[001]",
+          "name": "Sleepiness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered per hour -0.1, but restores +0.25 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Dusk",
+      "rarity": 6,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "control_mp_cost&bd1[000]",
+          "name": "'Unstirred by Gain'",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour; and when self Morale is below 12, Worldly Plight+15",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_cost&bd2[000]",
+          "name": "'Unmoved by Loss'",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, decreases own morale consumption by+0.5; and when self morale is above12, Perception Information+10",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Earthspirit",
+      "rarity": 4,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "hire_spd_cost[010]",
+          "name": "Catastrophe Messenger α",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd_cost[200]",
+          "name": "Clocking Out On Time",
+          "room": "Office",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +45% and Morale consumed per hour +2",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[211]",
+          "name": "Geology β",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Originium formula related productivity +35%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Elysium",
+      "rarity": 5,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "meet_team[060]",
+          "name": "Correspondent",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining Rhodes Island clues (Rate is influenced by length of work time)",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_flag[060]",
+          "name": "Pioneer",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, every time that a non-Rhodes Island clue is collected, increases the likelihood of obtaining Rhodes Island clues (Rate is influenced by length of work time)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Estelle",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "workshop_proc_probability[020]",
+          "name": "Focus β",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 60%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ethan",
+      "rarity": 4,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "hire_spd[030]",
+          "name": "WRITER",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +40%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself[030]",
+          "name": "Concealed Gourmet",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.75 per hour",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Eunectes",
+      "rarity": 6,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "manu_prod_spd&power[000]",
+          "name": "Automation α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory becomes 0 (excluding the additional productivity affected by facility count), but each Power Plant increases that Factory's productivity by +5%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd&power[010]",
+          "name": "Automation β",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory becomes 0 (excluding the additional productivity affected by facility count), but each Power Plant increases that Factory's productivity by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "control_pow_bot[000]",
+          "name": "I've Got This",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, if Lancet-2 is assigned to a Power Plant,  Power Plant count +2 (only affects the facility count)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Executor",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "train_spd&profession[040]",
+          "name": "Sniper Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Sniper Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_cost[003]",
+          "name": "Cleaning Agreement",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Exusiai",
+      "rarity": 6,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "trade_ord_spd[010]",
+          "name": "Penguin Logistics α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[020]",
+          "name": "Logistics Expert",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +35%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Eyjafjalla",
+      "rarity": 6,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "manu_formula_spd[213]",
+          "name": "Volcanologist",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Originium formula related productivity +35%",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd[011]",
+          "name": "Catastrophe Messenger β",
+          "room": "Office",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +45%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "FEater",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "manu_formula_spd[000]",
+          "name": "Combat Guidance Video",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Battle Record formula related productivity +30%",
+          "combo_tags": [
+            "castle3_factory_battlerecord"
+          ]
+        },
+        {
+          "id": "manu_formula_spd[001]",
+          "name": "Boxing Guidance Video",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Battle Record formula related productivity +35%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Fang",
+      "rarity": 3,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "manu_prod_spd_addition[030]",
+          "name": "Hothead",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +20% in the first hour and thereafter +1% per hour, up to +25%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Firewatch",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "meet_spd[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd[001]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Flamebringer",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
         {
-          "id": "waaifu_s2",
-          "name": "Amemonoke",
+          "id": "workshop_formula_probability[000]",
+          "name": "Tech Theory",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Skill Summaries, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[020]",
+          "name": "Arise",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Skill Summaries, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Flint",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "train_spd&profession2[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[320]",
+          "name": "Austerity",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%; if training this skill to Specialization Level 2, training speed will be further increased by +45%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Folinic",
+      "rarity": 5,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[120]",
+          "name": "Toxicology α",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_cost3[100]",
+          "name": "Meticulous",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, reduces the Morale consumed by all corresponding formulas that cost 2 Morale by -1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Franka",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "train_spd&profession[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[021]",
+          "name": "Guard Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +50%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[031]",
+          "name": "B.P.R.S",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Blacksteel Worldwide",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Frost",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "control_mp_cost&faction[990]",
+          "name": "Team Rainbow",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Operator from Team Rainbow increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_frost[000]",
+          "name": "Mechanical Engineering",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Workshop to process any material, the production rate of byproduct increases by 50%, and for every1 Intelligence Reserve, increases extra 5%; if the number of Ursus Specialty Beverages reaches 4 bottles, increases extra 15%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Frostleaf",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[000]",
+          "name": "Combat Guidance Video",
           "room": "Factory",
           "elite_required": 1,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng sản lượng Factory khi phối hợp cùng Pudding trong combo Factory-Gold",
-          "value_pct": 10,
-          "combo_tags": ["factory_gold_core"]
+          "effect": "When this Operator is assigned to a Factory, Battle Record formula related productivity +30%",
+          "combo_tags": [
+            "castle3_factory_battlerecord"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gavial",
+      "rarity": 4,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[110]",
+          "name": "Pharmacology·α",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[070]",
+          "name": "Medic Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Medic Operators' Specialization training speed +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Gitano",
+      "rarity": 4,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[010]",
+          "name": "Supply Management",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +25% and the order limit +1",
+          "combo_tags": [
+            "orchid_trading_secondary"
+          ]
+        },
+        {
+          "id": "meet_spd[010]",
+          "name": "Divination",
+          "room": "Reception",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Gladiia",
+      "rarity": 6,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "control_mp_aegir1[000]",
+          "name": "Tide Observation",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, for each Abyssal Hunter Operator currently assigned to a non-Dormitory facility, self Morale consumed per hour +0.5; Otherwise, self Morale restored per hour +0.5, with an additional +0.5 if the Abyssal Hunter Operator assigned to the Dormitory has full Morale.",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_aegir2[000]",
+          "name": "Group Hunting ·α",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour; Abyssal Hunters in the Base gain Special Bonus (Has Special Interaction Rules with certain skills).",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_aegir2[010]",
+          "name": "Group Hunting ·β",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour; Abyssal Hunters in the Base gain Special Bonus (Has Special Interaction Rules with certain skills).",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Glaucus",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "power_rec_spd[003]",
+          "name": "Electromagnetic Charge α",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "power_rec_spd[015]",
+          "name": "Electromagnetic Charge β",
+          "room": "PowerPlant",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +15%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Grani",
+      "rarity": 5,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "train_spd&profession[010]",
+          "name": "Vanguard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Vanguard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[011]",
+          "name": "Vanguard Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Vanguard Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Gravel",
+      "rarity": 4,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "workshop_proc_probability[000]",
+          "name": "Focus α",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 40%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[101]",
+          "name": "Metalwork β",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Precious Metal formula related productivity +35%",
+          "combo_tags": [
+            "gravel_precious_metal"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GreyThroat",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "control_mp_cost[005]",
+          "name": "Necessary Responsibility",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Greyy",
+      "rarity": 4,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "power_rec_spd[020]",
+          "name": "Electrostatic Field",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +20%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_proc_probability[010]",
+          "name": "Skillful Craftsman",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Gummy",
+      "rarity": 4,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "trade_ord_spd&cost[000]",
+          "name": "Communication",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30% and Morale consumed per hour -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[011]",
+          "name": "Cooking",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.35 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.35",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Haze",
+      "rarity": 4,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "manu_formula_spd[100]",
+          "name": "Metalwork α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Precious Metal formula related productivity +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Heavyrain",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "control_mp_cost[006]",
+          "name": "Guarding",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[030]",
+          "name": "Defender Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Defender Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[330]",
+          "name": "Field Experience",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of Defender Operators by +30%, and further increases this speed by +45% if training the skill to Specialization Level 2",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Hellagur",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "dorm_rec_all&oneself[010]",
+          "name": "Release",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered per hour +0.55",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all&oneself[011]",
+          "name": "Break Loose",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores the Morale of all other Operators assigned to that Dorm by +0.1 per hour (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all&oneself[012]",
+          "name": "Absolution",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered per hour +0.55, and restores +0.1 Morale per hour to all other Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[010]",
+          "name": "Arts of War",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Skill Summaries, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Hibiscus",
+      "rarity": 3,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "dorm_rec_single[010]",
+          "name": "Thoughtfulness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[100]",
+          "name": "Nutriology",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Hoshiguma",
+      "rarity": 6,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "train_spd&profession[030]",
+          "name": "Defender Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Defender Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[130]",
+          "name": "Hannya",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Defender Operators' Specialization training speed +60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Hung",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "workshop_proc_probability[010]",
+          "name": "Skillful Craftsman",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 50%",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_cost&faction2[000]",
+          "name": "Adamantly Easygoing",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Operator from Lee's Detective Agency restores extra Morale and increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ifrit",
+      "rarity": 6,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "power_rec_spd[001]",
+          "name": "Heat Charge α",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "power_rec_spd[013]",
+          "name": "Superheat Charge",
+          "room": "PowerPlant",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +15%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Indra",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "meet_spd&team[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[070]",
+          "name": "Arraigner",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Glasgow",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Iris",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "dorm_rec_bd_n1_n2[000]",
+          "name": "Bedtime Story",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.1 Morale per hour to all Operators in that Dormitory (Only the strongest effect of this type triggered). Additionally, for every level of the current Dormitory, 1 level of Dreamland",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_bd_n1[000]",
+          "name": "Sleep Talking",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, every 1 levels of Dreamland is converted into 1 points of Perception Information",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Istina",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "train_spd&profession[060]",
+          "name": "Supporter Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Supporter Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[050]",
+          "name": "Military Advisor",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, increases clue search speed by 10%; increases the likelihood of obtaining Ursus Student Self-Governing Group clues(Working time affects the likelihood).",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Jackie",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "dorm_rec_single&oneself[000]",
+          "name": "Liveliness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.2 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.4",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd[0010]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
         }
       ]
     },
     {
       "name": "Jaye",
-      "rarity": 5,
+      "rarity": 4,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "trade_ord_limit_diff[000]",
+          "name": "Street Economics",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, increases order acquisition efficiency by +4% for every difference of 1 order(s) between the current number of orders and the maximum number of orders",
+          "combo_tags": [
+            "jaye_trading_swing"
+          ]
+        },
+        {
+          "id": "trade_ord_limit_count[000]",
+          "name": "Basic Needs",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, reduces the order limit by -1 for every 10% order acquisition efficiency provided by all other Operators stationed at that Trading Post; furthermore, increases order acquisition efficiency by +4% per every 1 order(s)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Jessica",
+      "rarity": 4,
       "profession": "Sniper",
       "skills": [
         {
-          "id": "jaye_s2",
-          "name": "Full Firepower",
+          "id": "manu_prod_spd[010]",
+          "name": "Standardization β",
           "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[030]",
+          "name": "Liaison",
+          "room": "Reception",
           "elite_required": 1,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng sản lượng LMD Factory kèm hiệu ứng phụ trợ combo",
-          "value_pct": 10,
-          "combo_tags": ["factory_gold_core"]
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Blacksteel Worldwide",
+          "combo_tags": []
         }
       ]
     },
     {
       "name": "Kafka",
       "rarity": 5,
-      "profession": "Caster",
+      "profession": "Specialist",
       "skills": [
         {
-          "id": "kafka_s2",
-          "name": "Wingspan",
-          "room": "Factory",
-          "elite_required": 1,
+          "id": "trade_ord_wt&cost[001]",
+          "name": "Handicrafts α",
+          "room": "TradingPost",
+          "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng sản lượng EXP-card / LMD Factory tuỳ chế phẩm được chọn",
-          "value_pct": 10,
-          "combo_tags": ["factory_gold_core", "factory_exp_core"]
+          "effect": "When this Operator is assigned to a Trading Post, the chance of getting higher-yield Precious Metal orders is increased slightly (rate is influenced by length of work time), and Morale consumed per hour is reduced by -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_wt&cost[011]",
+          "name": "Handicrafts β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, the chance of getting higher-yield Precious Metal orders is increased (rate is influenced by length of work time), and Morale consumed per hour is reduced by -0.25",
+          "combo_tags": [
+            "kafka_precious_metal"
+          ]
         }
       ]
     },
     {
-      "name": "Podenco",
-      "rarity": 4,
-      "profession": "Supporter",
+      "name": "Kal'tsit",
+      "rarity": 6,
+      "profession": "Medic",
       "skills": [
         {
-          "id": "podenco_s1",
-          "name": "Vigor",
-          "room": "PowerPlant",
+          "id": "workshop_proc_probability[040]",
+          "name": "Unknown Technology",
+          "room": "Workshop",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Tăng sản lượng điện Power Plant",
-          "value_pct": 20,
-          "combo_tags": ["power_plant_core"]
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        },
+        {
+          "id": "control_prod_spd[000]",
+          "name": "Highest Authority",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, all Factories' productivity +2% (only the most effective one will take effect when assigned Operators have the same skill effect)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Kroos",
+      "rarity": 3,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "manu_prod_spd_addition[040]",
+          "name": "Slowcoach",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +15% in the first hour and thereafter +2% per hour, up to +25%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
         }
       ]
     },
@@ -317,75 +2472,2527 @@
       "profession": "Medic",
       "skills": [
         {
-          "id": "lancet2_s1",
-          "name": "Emergency Rescue",
+          "id": "power_rec_spd[000]",
+          "name": "Backup Energy",
           "room": "PowerPlant",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Giảm tiêu hao Morale cho operator cùng phòng Power Plant (filler rẻ, không tốn EXP nâng)",
-          "value_pct": 0,
-          "special": "morale_upkeep_reduction",
-          "combo_tags": ["power_plant_filler"]
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single[000]",
+          "name": "Medical Service",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.65 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": [
+            "lancet2_dorm_filler"
+          ]
         }
       ]
     },
     {
-      "name": "Castle-3",
-      "rarity": 1,
+      "name": "Lappland",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "trade_ord_limit&cost_P[000]",
+          "name": "Hidden Purpose α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the same Trading Post as Texas, Morale consumed each hour -0.1, and order limit +2",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_limit&cost_P[001]",
+          "name": "Hidden Purpose β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the same Trading Post as Texas, Morale consumed each hour -0.1, and order limit +4",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Lava",
+      "rarity": 3,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "power_rec_spd[001]",
+          "name": "Heat Charge α",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[210]",
+          "name": "Originium Work β",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Originium formula related productivity +35%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Lava the Purgatory",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "control_mp_cost&faction[900]",
+          "name": "Alternate Operator",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Alternate Operator increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "power_rec_spd[022]",
+          "name": "Heat Charge γ",
+          "room": "PowerPlant",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Leizi",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "control_clue_cost[010]",
+          "name": "Picky",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, slightly increases the likelihood of obtaining Clues corresponding to the factions of Operators assigned to the Reception Room, but slightly increases the Morale consumption of Operators assigned to the Control Center",
+          "combo_tags": []
+        },
+        {
+          "id": "control_clue_cost[011]",
+          "name": "Discernment",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, slightly increases the likelihood of obtaining Clues corresponding to the factions of Operators assigned to the Reception Room",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Leonhardt",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[220]",
+          "name": "Structural Mechanics",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Building material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_cost3[220]",
+          "name": "Mineral Beneficiation",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Building materials, reduces the Morale consumed by all corresponding formulas that cost 4 Morale by -2",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Liskarm",
+      "rarity": 5,
       "profession": "Defender",
       "skills": [
         {
-          "id": "castle3_s1",
-          "name": "Iron Wall",
+          "id": "power_rec_spd[014]",
+          "name": "Pulsed Arc α",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +15%",
+          "combo_tags": []
+        },
+        {
+          "id": "power_rec_spd[021]",
+          "name": "Pulsed Arc β",
+          "room": "PowerPlant",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Magallan",
+      "rarity": 6,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "workshop_proc_probability[011]",
+          "name": "Multifunctional Robotter",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 50%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_cost[000]",
+          "name": "Drone - Soaring Dragon",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, reduces the Morale consumed by all formulas that cost 4 Morale or more by -2",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Manticore",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "train_spd&profession[080]",
+          "name": "Specialist Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Specialist Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[081]",
+          "name": "Specialist Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Specialist Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Matoimaru",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[000]",
+          "name": "Tech Theory",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Skill Summaries, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Matterhorn",
+      "rarity": 4,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[020]",
+          "name": "Karlan Commercial α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +15% and the order limit +2",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[031]",
+          "name": "Defender Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Defender Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "May",
+      "rarity": 4,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "meet_spd[0010]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_team[020]",
+          "name": "Royal Detective (Self Proclaimed)",
+          "room": "Reception",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, the likelihood of obtaining Penguin Logistics clues is increased (working time improves the likelihood).",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Mayer",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "workshop_proc_probability[030]",
+          "name": "Meeboo: Processing",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 65%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd[020]",
+          "name": "Meeboo: Manufacturing",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Melantha",
+      "rarity": 3,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[010]",
+          "name": "Supply Management",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +25% and the order limit +1",
+          "combo_tags": [
+            "orchid_trading_secondary"
+          ]
+        },
+        {
+          "id": "workshop_proc_probability[000]",
+          "name": "Focus α",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 40%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Meteor",
+      "rarity": 4,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "manu_prod_spd[000]",
+          "name": "Standardization α",
           "room": "Factory",
           "elite_required": 0,
           "level_required": 1,
-          "skill_slot": 1,
-          "module_required": null,
-          "effect": "Filler rẻ cho Factory, không có buff sản lượng đáng kể nhưng gần như miễn phí để nâng",
-          "value_pct": 0,
-          "special": "cheap_filler",
-          "combo_tags": ["factory_filler"]
+          "effect": "When this Operator is assigned to a Factory, productivity +15%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single[010]",
+          "name": "Thoughtfulness",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Meteorite",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[130]",
+          "name": "Blasting Materiology α",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[131]",
+          "name": "Blasting Materiology β",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Midnight",
+      "rarity": 3,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "trade_ord_spd&cost[000]",
+          "name": "Communication",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30% and Morale consumed per hour -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[200]",
+          "name": "Originium Work α",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Originium formula related productivity +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Mint",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "train_spd&profession2[050]",
+          "name": "Caster Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Caster Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[350]",
+          "name": "Widely-Read",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of Caster Operators by +30%, and further increases this speed by +45% if training the skill to Specialization Level 2",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[201]",
+          "name": "Geology α",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Originium formula related productivity +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Mostima",
+      "rarity": 6,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "meet_spd&team[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[020]",
+          "name": "Messenger - Penguin Logistics",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Penguin Logistics",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Mountain",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "hire_spd&clue2[230]",
+          "name": "Insider",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, increases HR contacting speed by +20%, and for every 1 contacts made, increases the likelihood of obtaining Blacksteel clues (working time and recruitment slots improves the likelihood)",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_flag[010]",
+          "name": "Columbian History",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, every time that a non-Rhine Lab clue is collected, the likelihood of obtaining Rhine Lab clues is increased (working time improves the likelihood)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Mousse",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[010]",
+          "name": "Baking",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.3 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.3",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Mr. Nothing",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "hire_spd&clue[101]",
+          "name": "Nosy",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, increases HR contacting speed by +30%, and increases Clue collection speed in the Reception Room by +5% for each additional Recruitment slot (does not count default slots).",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd_bd_n2[000]",
+          "name": "'Obvious Deception'",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, each Operator in the Dormitory grantsWorldly Plight+1, and for 1pointWorldly Plight, grant +1% order acquisition efficiency",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Mudrock",
+      "rarity": 6,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "workshop_formula_cost4[000]",
+          "name": "Perseverance",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the corresponding formulas will only consume 2 Morale",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_device[050]",
+          "name": "DIY Orirock",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Orirock-type material, the production rate of byproduct increases by 90%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Myrrh",
+      "rarity": 4,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[110]",
+          "name": "Pharmacology·α",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single[010]",
+          "name": "Thoughtfulness",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Myrtle",
+      "rarity": 4,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "trade_ord_limit&cost[000]",
+          "name": "Negotiation",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order limit +5 and Morale consumed per hour -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all[013]",
+          "name": "Leader",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.15 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Nearl",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "control_mp_cost[000]",
+          "name": "Capable Assistance",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[030]",
+          "name": "Radiant Knight",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.5 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.25",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Nian",
+      "rarity": 6,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[140]",
+          "name": "Rare Metal Identification",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 100%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_cost[010]",
+          "name": "Reckless",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, increases the Morale consumed by all corresponding formulas by +2",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Nightingale",
+      "rarity": 6,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "dorm_rec_all[000]",
+          "name": "Inspiration",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.1 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all[021]",
+          "name": "Lady of the Lamp",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.2 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Nightmare",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "train_spd&profession[050]",
+          "name": "Caster Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Caster Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd[020]",
+          "name": "Psychology",
+          "room": "Office",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +40%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Noir Corne",
+      "rarity": 2,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "manu_prod_spd&limit[001]",
+          "name": "Warehouse Organization β",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +10 and productivity +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[000]",
+          "name": "Order Management α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +10% and the order limit +2",
+          "combo_tags": []
         }
       ]
     },
     {
       "name": "Orchid",
-      "rarity": 4,
-      "profession": "Medic",
+      "rarity": 3,
+      "profession": "Supporter",
       "skills": [
         {
-          "id": "orchid_s2",
-          "name": "Spring's Grace",
+          "id": "hire_spd[020]",
+          "name": "Psychology",
           "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +40%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[010]",
+          "name": "Supply Management",
+          "room": "TradingPost",
           "elite_required": 1,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng thu thập thông tin Office (Intel)",
-          "value_pct": 15,
-          "combo_tags": ["office_intel_core"]
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +25% and the order limit +1",
+          "combo_tags": [
+            "orchid_trading_secondary"
+          ]
         }
       ]
     },
     {
-      "name": "Mon3tr",
+      "name": "Passenger",
+      "rarity": 6,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "power_rec_spd[003]",
+          "name": "Electromagnetic Charge α",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "power_rec_spd[016]",
+          "name": "Energy Gathering",
+          "room": "PowerPlant",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +15%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd&power[000]",
+          "name": "Automation α",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory becomes 0 (excluding the additional productivity affected by facility count), but each Power Plant increases that Factory's productivity by +5%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Perfumer",
+      "rarity": 4,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[110]",
+          "name": "Pharmacology·α",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd[010]",
+          "name": "Standardization β",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Phantom",
+      "rarity": 6,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "train_spd&profession[080]",
+          "name": "Specialist Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Specialist Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[180]",
+          "name": "Masked Phantom",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Specialist Operators' Specialization training speed +60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Pinecone",
+      "rarity": 4,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[200]",
+          "name": "Engineering",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Building material, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_cost3[200]",
+          "name": "Portable Battery",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Building materials, reduces the Morale consumed by all corresponding formulas that cost 2 Morale by -1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Platinum",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "train_spd&profession[040]",
+          "name": "Sniper Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Sniper Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[041]",
+          "name": "Sniper Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Sniper Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Plume",
+      "rarity": 3,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "train_spd&profession[010]",
+          "name": "Vanguard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Vanguard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[000]",
+          "name": "Order Management α",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +10% and the order limit +2",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Podenco",
+      "rarity": 4,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "dorm_rec_single[010]",
+          "name": "Thoughtfulness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single[001]",
+          "name": "Convalescence",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.65 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all[012]",
+          "name": "Nourish the Soul",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.15 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": [
+            "podenco_dorm_group"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Popukar",
+      "rarity": 3,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "manu_prod_spd&limit&cost[010]",
+          "name": "Trouble Maker",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%, capacity limit -12, and Morale consumed per hour +0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[020]",
+          "name": "Harmony",
+          "room": "Dorm",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.4 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.2",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Pramanix",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "dorm_rec_single&oneself[021]",
+          "name": "Karlan Saint",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.5 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[061]",
+          "name": "Supporter Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Supporter Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Projekt Red",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
         {
-          "id": "mon3tr_s2",
-          "name": "Party Trick",
+          "id": "control_mp_cost[001]",
+          "name": "S.W.E.E.P.",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd[020]",
+          "name": "Tracker",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Provence",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "hire_spd[010]",
+          "name": "Catastrophe Messenger α",
           "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd[011]",
+          "name": "Catastrophe Messenger β",
+          "room": "Office",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +45%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Ptilopsis",
+      "rarity": 5,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "manu_prod_spd[001]",
+          "name": "Rhine Tech α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +15%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd[011]",
+          "name": "Rhine Tech β",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Purestream",
+      "rarity": 4,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "power_rec_spd[011]",
+          "name": "Clean Energy",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +15%",
+          "combo_tags": [
+            "purestream_power_drone"
+          ]
+        },
+        {
+          "id": "manu_prod_spd&trade[000]",
+          "name": "Renewable Energy",
+          "room": "Factory",
           "elite_required": 1,
           "level_required": 1,
-          "skill_slot": 2,
-          "module_required": null,
-          "effect": "Tăng thu thập thông tin Office, kèm hiệu ứng phụ ngẫu nhiên",
-          "value_pct": 20,
-          "combo_tags": ["office_intel_core"]
+          "effect": "When this Operator is assigned to a Factory, every Trading Post makes the Factory's Precious Metal formula related productivity +20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Rangers",
+      "rarity": 2,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "hire_spd[000]",
+          "name": "Personnel Management α",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +20%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_proc_probability[021]",
+          "name": "Strong Despite Years",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Reed",
+      "rarity": 5,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_cost[004]",
+          "name": "Substitute",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Robin",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "train_spd&profession2[080]",
+          "name": "Specialist Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Specialist Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[280]",
+          "name": "Trap Focus",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Specialist Operators' Specialization training speed +30%; if training this skill to Specialization Level 1, training speed will be further increased by +45%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Rope",
+      "rarity": 4,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "meet_spd[001]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_limit&cost[000]",
+          "name": "Negotiation",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order limit +5 and Morale consumed per hour -0.25",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Rosa",
+      "rarity": 6,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "control_mp_cost&faction[020]",
+          "name": "Student Council President",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Operator from Ursus Student Self-Governing Group increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd&clue2[250]",
+          "name": "Prestige",
+          "room": "Office",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, increases HR contacting speed by +20%, and for every 1 contacts made, increases the likelihood of obtaining Ursus Student Self-Governing Group clues (Working time and recruitment slots affect the likelihood).",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Rosmontis",
+      "rarity": 6,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "manu_prod_spd_bd_n1[000]",
+          "name": "Extrasensory",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, for every 1 operator in the Dormitory, Perception Information +1. Additionally, every 1 points of Perception Information is converted into 1 points of Chain of Thought",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd_bd[000]",
+          "name": "Psychokinesis",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to Factory, for every 2 points of Chain of Thought, productivity +1%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd_bd[010]",
+          "name": "Manifestation of Consciousness",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to Factory, for every 1 points of Chain of Thought, productivity +1%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Saga",
+      "rarity": 6,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "train_spd&profession[010]",
+          "name": "Vanguard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Vanguard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[110]",
+          "name": "Secularization",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Vanguard Operators' Specialization training speed +60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Saria",
+      "rarity": 6,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "meet_spd&team[000]",
+          "name": "Clue Search α",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd&team[010]",
+          "name": "Watchman",
+          "room": "Reception",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 10% and it's easier to obtain the clues of Rhine Lab(rate is influenced by length of worktime)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Savage",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[000]",
+          "name": "Tech Theory",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Skill Summaries, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single&oneself[011]",
+          "name": "Cooking",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.35 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour +0.35",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Scavenger",
+      "rarity": 4,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "control_mp_cost[001]",
+          "name": "S.W.E.E.P.",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_limit&cost[000]",
+          "name": "Junkman",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +8 and Morale consumed per hour -0.25",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Scene",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "manu_prod_spd_addition[041]",
+          "name": "Time-Lapse Photography",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +15% in the first hour and thereafter +2% per hour, up to +25%",
+          "combo_tags": [
+            "scene_factory_ramp"
+          ]
+        },
+        {
+          "id": "manu_formula_limit[0000]",
+          "name": "Editing α",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit is increased by +12 when producing Battle Records",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Schwarz",
+      "rarity": 6,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "dorm_rec_single_P[000]",
+          "name": "Make Tea",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); if the target is Ceylon, further increases Morale restored by +0.45",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[140]",
+          "name": "Black Arrow",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Sniper Operators' Specialization training speed +60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Sesa",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "workshop_formula_cost3[120]",
+          "name": "Pragmatic Minimalism",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, reduces the Morale consumed by all corresponding formulas that cost 4 Morale by -2",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[102]",
+          "name": "Industrial Design",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 75%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Shamare",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "trade_ord_wt&cost[000]",
+          "name": "Tailoring α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, the chance of getting higher-yield Precious Metal orders is increased slightly (rate is influenced by length of work time), and Morale consumed per hour is reduced by -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_vodfox[000]",
+          "name": "Whispers",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, the order acquisition efficiency contributed by all other Operators assigned to that Trading Post becomes 0, but each Operator increases the order acquisition efficiency of this Operator by +45%, while total Morale consumed is increased by +0.25 per hour.",
+          "combo_tags": [
+            "shamare_solo_trading"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shaw",
+      "rarity": 4,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "workshop_formula_probability[200]",
+          "name": "Engineering",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Building material, the production rate of byproduct increases by 70%",
+          "combo_tags": []
+        },
+        {
+          "id": "power_rec_spd[010]",
+          "name": "Equipment Maintenance",
+          "room": "PowerPlant",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +15%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Shining",
+      "rarity": 6,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "dorm_rec_single[010]",
+          "name": "Thoughtfulness",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_single[020]",
+          "name": "Mercy",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.75 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Shirayuki",
+      "rarity": 4,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "meet_spd[001]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[000]",
+          "name": "Combat Guidance Video",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Battle Record formula related productivity +30%",
+          "combo_tags": [
+            "castle3_factory_battlerecord"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sideroca",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "train_spd&profession2[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[420]",
+          "name": "Whole-Heartedness",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%; if training this skill to Specialization Level 3, training speed will be further increased by +45%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Siege",
+      "rarity": 6,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "dorm_rec_all[013]",
+          "name": "Leader",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.15 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all[022]",
+          "name": "Lionheart",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.2 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Silence",
+      "rarity": 5,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "manu_prod_spd[001]",
+          "name": "Rhine Tech α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +15%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd[011]",
+          "name": "Rhine Tech β",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "SilverAsh",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "trade_ord_spd&limit[020]",
+          "name": "Karlan Commercial α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +15% and the order limit +2",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&limit[022]",
+          "name": "Lord of Karlan",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20% and the order limit +4",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Skadi",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself[020]",
+          "name": "Elegy",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +1 per hour",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Skadi the Corrupting Heart",
+      "rarity": 6,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "train_spd&profession2[060]",
+          "name": "Supporter Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Supporter Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[641]",
+          "name": "Assimilation",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of Supporter Operators by +30%, and further increases this speed by +65% if training the skill to Specialization Level 3",
+          "combo_tags": []
+        },
+        {
+          "id": "train_cost&profession[060]",
+          "name": "Mutation",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour +1 when training a Supporter Operator's skill to Specialization Level 3",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Skyfire",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "train_spd&profession[050]",
+          "name": "Caster Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Caster Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[051]",
+          "name": "Caster Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Caster Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Snowsant",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "trade_ord_spd_variable2[000]",
+          "name": "Heavenly Reward α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, provides an additional 5% order acquisition efficiency for every 5% order acquisition efficiency provided by all other Operators assigned to that Trading Post, up to a maximum of 25% order acquisition efficiency.",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd_variable2[001]",
+          "name": "Heavenly Reward β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, provides an additional 5% order acquisition efficiency for every 5% order acquisition efficiency provided by all other Operators assigned to that Trading Post, up to a maximum of 35% order acquisition efficiency.",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Sora",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "dorm_rec_all[011]",
+          "name": "Idol",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.15 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[011]",
+          "name": "Penguin Logistics β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Specter",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.7 per hour",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_oneself[010]",
+          "name": "Craze",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, self Morale recovered +0.85 per hour",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Spot",
+      "rarity": 3,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "workshop_proc_probability[010]",
+          "name": "Skillful Craftsman",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 50%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_formula_spd[100]",
+          "name": "Metalwork α",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Precious Metal formula related productivity +30%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Steward",
+      "rarity": 3,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "trade_ord_limit&cost[000]",
+          "name": "Negotiation",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order limit +5 and Morale consumed per hour -0.25",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd[010]",
+          "name": "Standardization β",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Surtr",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "train_spd&profession[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[120]",
+          "name": "Bladework Memory",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Sussurro",
+      "rarity": 4,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "train_spd&profession[070]",
+          "name": "Medic Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Medic Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_probability[111]",
+          "name": "Pharmacology β",
+          "room": "Workshop",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process elite material, the production rate of byproduct increases by 80%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Suzuran",
+      "rarity": 6,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "train_spd&profession[060]",
+          "name": "Supporter Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Supporter Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[160]",
+          "name": "Resonance",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Supporter Operators' Specialization training speed +60%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Swire",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "control_tra_spd[010]",
+          "name": "Princess",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, all Trading Posts' order efficiency +7% (only the most effective one will take effect when assigned Operators have the same skill effect)",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd[000]",
+          "name": "Drillmaster",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "THRM-EX",
+      "rarity": 1,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "power_rec_spd[000]",
+          "name": "Backup Energy",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "power_rec_spd&cost[000]",
+          "name": "Enthusiasm",
+          "room": "PowerPlant",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to a Power Plant, reduces the Morale consumed each hour by -0.52",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Tachanka",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "control_mp_cost&faction[990]",
+          "name": "Team Rainbow",
+          "room": "Control",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, each Operator from Team Rainbow increases the Morale of all Operators in the Control Center by +0.05 per hour.",
+          "combo_tags": []
+        },
+        {
+          "id": "control_mp_bd[010]",
+          "name": "Ursus Specialty Beverage",
+          "room": "Control",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Control Center, for each Ursus Student Self-Governing Group Operator, Ursus Specialty Beverage+1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Texas",
+      "rarity": 5,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "trade_ord_spd&cost_P[000]",
+          "name": "Feud",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the same Trading Post as Lappland, Morale consumed each hour +0.3, and order acquisition efficiency +65%",
+          "combo_tags": [
+            "texas_lappland_pair"
+          ]
+        },
+        {
+          "id": "trade_ord_limit&cost_P[010]",
+          "name": "Tacit Understanding",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the same Trading Post as Exusiai, Morale consumed each hour -0.3",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Thorns",
+      "rarity": 6,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "workshop_proc_probability[012]",
+          "name": "'Alchemy'",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, the production rate of byproduct increases by 50%",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_recovery[000]",
+          "name": "'Explosion Arts'",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process any material, this Operator's Morale will be restored once for every 2 times no byproducts are produced during processing, equal to the Morale consumed for processing that corresponding formula one time (the final Morale total is calculated after processing is completed)",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Toddifons",
+      "rarity": 5,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "workshop_formula_cost3[111]",
+          "name": "Fusion Casting",
+          "room": "Workshop",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Workshop to process Elite materials, reduces the Morale consumed by all corresponding formulas that cost 4 Morale by -1",
+          "combo_tags": []
+        },
+        {
+          "id": "workshop_formula_device[020]",
+          "name": "DIY Oriron",
+          "room": "Workshop",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Workshop to process Oriron-type materials, the production rate of byproduct increases by 90%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Tomimi",
+      "rarity": 5,
+      "profession": "Caster",
+      "skills": [
+        {
+          "id": "dorm_rec_single_P[001]",
+          "name": "Barbecue Master",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.55 Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); if the target is Gavial, further increases Morale restored by +0.45",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[250]",
+          "name": "Sciolism",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of Caster Operators by +30%, and further increases this speed by +45% if training the skill to Specialization Level 1",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Tsukinogi",
+      "rarity": 5,
+      "profession": "Supporter",
+      "skills": [
+        {
+          "id": "hire_spd&clue[010]",
+          "name": "Catastrophe Messenger α",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd&clue[100]",
+          "name": "Empath's Insight",
+          "room": "Office",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, increases HR contacting speed by +30%, and increases Clue collection speed in the Reception Room by +5% for each additional Recruitment slot (does not count default slots).",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Tuye",
+      "rarity": 5,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "trade_ord_spd&gold[000]",
+          "name": "Logistics Planning α",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +5%; Furthermore, increase order acquisition efficiency by an additional +15% for every 4 Factories producing Pure Gold",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd&gold[010]",
+          "name": "Logistics Planning β",
+          "room": "TradingPost",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +5%; Furthermore, increase order acquisition efficiency by an additional +15% for every 2 Factories producing Pure Gold",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Utage",
+      "rarity": 4,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "hire_spd[020]",
+          "name": "Psychology",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +40%",
+          "combo_tags": []
+        },
+        {
+          "id": "meet_spd[001]",
+          "name": "Clue Search β",
+          "room": "Reception",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the Reception Room, Clue search speed increases by 20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Vanilla",
+      "rarity": 3,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "manu_prod_spd[010]",
+          "name": "Standardization β",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity +25%",
+          "combo_tags": []
+        },
+        {
+          "id": "trade_ord_spd[000]",
+          "name": "Order Distribution α",
+          "room": "TradingPost",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +20%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Vermeil",
+      "rarity": 4,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "manu_prod_limit&cost[0000]",
+          "name": "Junkman",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, capacity limit +8 and Morale consumed per hour -0.25",
+          "combo_tags": [
+            "vermeil_factory_core"
+          ]
+        },
+        {
+          "id": "manu_prod_spd_variable[000]",
+          "name": "Recycling",
+          "room": "Factory",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Operators assigned to the Factory increase all capacity limits, add 2% productivity.",
+          "combo_tags": [
+            "vermeil_factory_core"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vigna",
+      "rarity": 4,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "manu_formula_spd[000]",
+          "name": "Combat Guidance Video",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, Battle Record formula related productivity +30%",
+          "combo_tags": [
+            "castle3_factory_battlerecord"
+          ]
+        },
+        {
+          "id": "train_spd&profession[011]",
+          "name": "Vanguard Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 1,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Vanguard Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Vulcan",
+      "rarity": 5,
+      "profession": "Defender",
+      "skills": [
+        {
+          "id": "manu_prod_spd&limit&cost[000]",
+          "name": "Craftsmanship Spirit α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity -5%, capacity limit +16, and Morale consumed per hour -0.15",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd&limit&cost[001]",
+          "name": "Craftsmanship Spirit β",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, productivity -5%, capacity limit +19, and Morale consumed per hour -0.25",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "W",
+      "rarity": 6,
+      "profession": "Sniper",
+      "skills": [
+        {
+          "id": "train_spd&profession2[040]",
+          "name": "Sniper Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Sniper Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession2[441]",
+          "name": "Patience",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Sniper Operators' Specialization training speed +30%; if training this skill to Specialization Level 3, training speed will be further increased by +65%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_cost&profession[040]",
+          "name": "Insipid",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is increased by +1 when training a Sniper Operator's skill to Specialization Level 3",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Waai Fu",
+      "rarity": 5,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "manu_cost_all[000]",
+          "name": "Team Spirit",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, ignore the effects of any Operators stationed in that Factory that would affect the Morale consumption of this Operator",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd_variable2[000]",
+          "name": "Cooperative Will",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, provides an additional 5% productivity for every 5% productivity provided by all other Operators assigned to that Factory (excluding the additional productivity affected by facility count), up to a maximum of 40% productivity.",
+          "combo_tags": [
+            "waaifu_factory_stack"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Warfarin",
+      "rarity": 5,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "train_spd&profession[070]",
+          "name": "Medic Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Medic Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd&profession[071]",
+          "name": "Medic Expert β",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Medic Operators' Specialization training speed +50%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Weedy",
+      "rarity": 6,
+      "profession": "Specialist",
+      "skills": [
+        {
+          "id": "manu_prod_spd&power[010]",
+          "name": "Automation β",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory becomes 0 (excluding the additional productivity affected by facility count), but each Power Plant increases that Factory's productivity by +10%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd&power[020]",
+          "name": "Bionic Seadragon",
+          "room": "Factory",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory becomes 0 (excluding the additional productivity affected by facility count), but each Power Plant increases that Factory's productivity by +15%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Whislash",
+      "rarity": 5,
+      "profession": "Guard",
+      "skills": [
+        {
+          "id": "train_spd&profession[020]",
+          "name": "Guard Expert α",
+          "room": "TrainingRoom",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Guard Operators' Specialization training speed +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "train_spd[0000]",
+          "name": "Drillmaster",
+          "room": "TrainingRoom",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed +25%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Whisperain",
+      "rarity": 5,
+      "profession": "Medic",
+      "skills": [
+        {
+          "id": "hire_spd_bd_n1_n1[100]",
+          "name": "Itinerant",
+          "room": "Office",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, HR contacting speed +20%. Additionally, for every Recruit slot (Default slots do not count), Memory Fragments +10",
+          "combo_tags": []
+        },
+        {
+          "id": "hire_spd_bd_n1[000]",
+          "name": "Memory Seeker",
+          "room": "Office",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to the HR Office, every 1 Memory Fragment is converted into 1 Perception Information. When Morale is fully consumed, remove all Memory Fragments and accumulated Perception Information",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Yato",
+      "rarity": 2,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TradingPost",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Trading Post, order acquisition efficiency +30%",
+          "combo_tags": []
+        },
+        {
+          "id": "manu_prod_spd[000]",
+          "name": "Standardization α",
+          "room": "Factory",
+          "elite_required": 0,
+          "level_required": 30,
+          "effect": "When this Operator is assigned to a Factory, productivity +15%",
+          "combo_tags": []
+        }
+      ]
+    },
+    {
+      "name": "Zima",
+      "rarity": 5,
+      "profession": "Vanguard",
+      "skills": [
+        {
+          "id": "dorm_rec_all[013]",
+          "name": "Leader",
+          "room": "Dorm",
+          "elite_required": 0,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.15 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
+        },
+        {
+          "id": "dorm_rec_all[020]",
+          "name": "General Z",
+          "room": "Dorm",
+          "elite_required": 2,
+          "level_required": 1,
+          "effect": "When this Operator is assigned to a Dormitory, restores +0.2 Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)",
+          "combo_tags": []
         }
       ]
     }

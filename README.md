@@ -17,16 +17,30 @@ Backend Java (không phụ thuộc thư viện ngoài) + Frontend HTML/CSS/JS ch
 
 ## ⚠️ Giới hạn quan trọng — đọc trước khi dùng
 
-1. **Database operator (`backend/data/operators.json`) là seed data**, không phải bộ dữ liệu đầy đủ
-   300+ operator của Arknights. Nó được tạo dựa trên kiến thức chung, không fetch trực tiếp từ
-   PRTS.wiki/GamePress, nên **có thể sai lệch % buff, điều kiện elite, hoặc thiếu operator mới**.
-2. **Chi phí LMD nâng elite chỉ là ước tính trung bình theo rarity** (`Analyzer.java`), KHÔNG tính
+1. **Database operator (`backend/data/operators.json`) được auto-generate từ data thật của game**
+   (xem `backend/tools/generate_operators.py`), nguồn: [Dimbreath/ArknightsData](https://github.com/Dimbreath/ArknightsData)
+   (en-US). Repo nguồn này **đã archived (ngừng cập nhật)**, nên:
+   - 192 operator có base skill tính đến thời điểm archive đã có đầy đủ, chính xác (tên, rarity,
+     profession, mô tả skill, room, elite yêu cầu — copy nguyên văn từ game, không phải suy đoán).
+   - **Operator phát hành SAU thời điểm archive sẽ KHÔNG có trong database** (ví dụ: Proviso,
+     Tequila, Quartz, Pudding — các combo nổi tiếng cộng đồng hay nhắc nhưng chưa có data ở đây).
+     Nếu bạn sở hữu các operator này, cần tự thêm thủ công theo schema (xem phần dưới).
+2. **`combo_tags`** (đánh dấu operator nào thuộc combo nổi tiếng nào) là **gán thủ công**, chỉ có ở
+   17 operator đã được đối chiếu kỹ với mô tả effect thật (Texas, Vermeil, Bibeak, Gravel, Shamare,
+   Scene, Bubble, Purestream, Waai Fu, Jaye, Kafka, Podenco, Lancet-2, Castle-3, Orchid). Phần lớn
+   192 operator còn lại có đầy đủ data skill nhưng `combo_tags: []` — vẫn hiển thị được trong
+   `/api/operators` nhưng chưa được xếp vào combo nào trong `combos.json`.
+3. **Chi phí LMD nâng elite chỉ là ước tính trung bình theo rarity** (`Analyzer.java`), KHÔNG tính
    Chip, EXP, hay vật liệu chuyên biệt — vì bộ dữ liệu chi phí chính xác theo từng operator quá lớn
    để nhồi vào bản seed này. Luôn kiểm tra chi phí thật trong game trước khi quyết định nâng cấp lớn.
-3. Trước khi dùng kết quả để ra quyết định đầu tư tài nguyên thật, hãy đối chiếu với
+4. Một số combo (ví dụ Texas + Lappland) yêu cầu **2 operator cụ thể đứng cùng phòng** — app hiện
+   chỉ track theo operator có `combo_tags` (Texas), KHÔNG kiểm tra bạn có sở hữu Lappland hay chưa.
+   Đọc kỹ phần `notes` của mỗi combo trong kết quả phân tích.
+5. Trước khi dùng kết quả để ra quyết định đầu tư tài nguyên thật, hãy đối chiếu với
    [PRTS.wiki](https://prts.wiki) hoặc GamePress.
 
-👉 Vì vậy project này được thiết kế để **dễ mở rộng** — xem phần "Thêm operator mới" bên dưới.
+👉 Project được thiết kế để **dễ mở rộng** — xem phần "Thêm operator mới" bên dưới, hoặc chạy lại
+`backend/tools/generate_operators.py` nếu tìm được nguồn data đang active hơn.
 
 ## Cấu trúc project
 
@@ -38,9 +52,11 @@ ak-base-optimizer/
 │   │   ├── DataStore.java   # Load operators.json + combos.json
 │   │   ├── Analyzer.java    # Logic match combo, ước tính ROI, xếp priority
 │   │   └── Server.java      # HTTP server (com.sun.net.httpserver), phục vụ API + static frontend
-│   └── data/
-│       ├── operators.json   # Database operator base skill (seed, có thể mở rộng)
-│       └── combos.json      # Định nghĩa các combo (map theo combo_tags)
+│   ├── data/
+│   │   ├── operators.json   # Database operator base skill (192 operator, auto-generated)
+│   │   └── combos.json      # Định nghĩa các combo (map theo combo_tags)
+│   └── tools/
+│       └── generate_operators.py  # Script fetch + generate operators.json từ data thật
 ├── frontend/
 │   ├── index.html
 │   ├── css/style.css
