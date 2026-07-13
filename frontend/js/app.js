@@ -1,7 +1,15 @@
 const API_BASE = window.location.origin;
 
 let knownOperatorNames = [];
+let allOperators = [];
 let rowCounter = 0;
+
+const CLASS_ORDER = ['Vanguard', 'Guard', 'Defender', 'Medic', 'Sniper', 'Caster', 'Supporter', 'Specialist'];
+const CLASS_LABEL_VI = {
+  Vanguard: 'TIÊN PHONG', Guard: 'CẬN VỆ', Defender: 'TRỌNG GIÁP', Medic: 'Y SƯ',
+  Sniper: 'XẠ THỦ', Caster: 'THUẬT SĨ', Supporter: 'HỖ TRỢ', Specialist: 'ĐẶC CHỦNG'
+};
+let pickerSelections = {}; // name -> elite (0/1/2)
 
 // ---------- Clock ----------
 function tickClock() {
@@ -17,7 +25,8 @@ async function loadOperators() {
   try {
     const res = await fetch(`${API_BASE}/api/operators`);
     const data = await res.json();
-    knownOperatorNames = data.operators.map(o => o.name);
+    allOperators = data.operators;
+    knownOperatorNames = allOperators.map(o => o.name);
     const dl = document.getElementById('operatorNames');
     dl.innerHTML = knownOperatorNames.map(n => `<option value="${n}">`).join('');
   } catch (e) {
@@ -51,8 +60,136 @@ function addRosterRow(prefill) {
 
 document.getElementById('addRowBtn').addEventListener('click', () => addRosterRow());
 
-// seed with a few empty rows to start
-for (let i = 0; i < 4; i++) addRosterRow();
+function upsertRosterRow(name, elite) {
+  const rows = document.querySelectorAll('.roster-row:not(.roster-row-head)');
+  for (const row of rows) {
+    if (row.querySelector('.f-name').value.trim().toLowerCase() === name.toLowerCase()) {
+      row.querySelector('.f-elite').value = elite;
+      return;
+    }
+  }
+  addRosterRow({ name, elite });
+}
+
+function removeRosterRowByName(name) {
+  const rows = document.querySelectorAll('.roster-row:not(.roster-row-head)');
+  for (const row of rows) {
+    if (row.querySelector('.f-name').value.trim().toLowerCase() === name.toLowerCase()) {
+      row.remove();
+      return;
+    }
+  }
+}
+
+// ---------- Operator Picker Modal ----------
+const pickerOverlay = document.getElementById('pickerOverlay');
+
+function openPicker() {
+  // Preload current roster into pickerSelections so reopening reflects state
+  pickerSelections = {};
+  collectRoster().forEach(r => { pickerSelections[r.name] = r.elite; });
+  renderPicker();
+  pickerOverlay.classList.remove('hidden');
+  document.getElementById('pickerSearch').value = '';
+  document.getElementById('pickerSearch').focus();
+}
+
+function closePicker() {
+  pickerOverlay.classList.add('hidden');
+}
+
+document.getElementById('openPickerBtn').addEventListener('click', openPicker);
+document.getElementById('closePickerBtn').addEventListener('click', closePicker);
+document.getElementById('pickerCancelBtn').addEventListener('click', closePicker);
+pickerOverlay.addEventListener('click', (e) => { if (e.target === pickerOverlay) closePicker(); });
+
+document.getElementById('pickerSearch').addEventListener('input', (e) => renderPicker(e.target.value.trim()));
+
+function renderPicker(filterText) {
+  filterText = (filterText || '').toLowerCase();
+  const body = document.getElementById('pickerBody');
+  const groups = {};
+  CLASS_ORDER.forEach(c => groups[c] = []);
+
+  allOperators.forEach(op => {
+    if (!CLASS_ORDER.includes(op.profession)) return; // skip Token/Trap/non-playable
+    if (filterText && !op.name.toLowerCase().includes(filterText)) return;
+    groups[op.profession].push(op);
+  });
+
+  let html = '';
+  let anyResults = false;
+
+  CLASS_ORDER.forEach(cls => {
+    const ops = groups[cls].sort((a, b) => a.name.localeCompare(b.name));
+    if (ops.length === 0) return;
+    anyResults = true;
+    html += `
+      <div class="picker-class-group">
+        <div class="picker-class-head">${CLASS_LABEL_VI[cls]} · ${cls} <span class="picker-class-count">(${ops.length})</span></div>
+        <div class="picker-op-list">
+          ${ops.map(op => renderPickerOpRow(op)).join('')}
+        </div>
+      </div>
+    `;
+  });
+
+  body.innerHTML = anyResults ? html : '<p class="picker-empty">Không tìm thấy operator nào khớp.</p>';
+
+  body.querySelectorAll('.elite-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.dataset.name;
+      const elite = parseInt(btn.dataset.elite, 10);
+      if (pickerSelections[name] === elite) {
+        delete pickerSelections[name]; // toggle off
+      } else {
+        pickerSelections[name] = elite;
+      }
+      renderPicker(document.getElementById('pickerSearch').value.trim());
+    });
+  });
+
+  updatePickerCount();
+}
+
+function renderPickerOpRow(op) {
+  const selected = pickerSelections.hasOwnProperty(op.name);
+  const curElite = pickerSelections[op.name];
+  const stars = '★'.repeat(op.rarity || 0);
+  return `
+    <div class="picker-op-row ${selected ? 'selected' : ''}">
+      <span class="picker-op-name">${esc(op.name)} <span class="picker-op-rarity">${stars}</span></span>
+      <div class="elite-toggle">
+        ${[0, 1, 2].map(e => `
+          <button type="button" class="elite-btn ${selected && curElite === e ? 'active' : ''}"
+            data-name="${esc(op.name)}" data-elite="${e}">E${e}</button>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function updatePickerCount() {
+  const n = Object.keys(pickerSelections).length;
+  document.getElementById('pickerSelectedCount').textContent = `${n} đã chọn`;
+  document.getElementById('pickerConfirmCount').textContent = n;
+}
+
+document.getElementById('pickerConfirmBtn').addEventListener('click', () => {
+  // Remove roster rows for operators that got deselected
+  const currentNames = collectRoster().map(r => r.name.toLowerCase());
+  currentNames.forEach(n => {
+    if (!Object.keys(pickerSelections).some(sel => sel.toLowerCase() === n)) {
+      removeRosterRowByName(n);
+    }
+  });
+  // Add/update selected
+  Object.entries(pickerSelections).forEach(([name, elite]) => upsertRosterRow(name, elite));
+  closePicker();
+});
+
+// Không seed dòng trống nữa — dùng picker "Chọn từ Database" làm luồng chính.
+// "+ Thêm tay" vẫn hoạt động cho operator gõ tự do (chưa có trong database).
 
 // ---------- Collect roster from DOM ----------
 function collectRoster() {

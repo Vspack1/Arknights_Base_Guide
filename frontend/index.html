@@ -57,7 +57,10 @@
 
     <div class="field-group roster-head">
       <label class="field-label">Roster (chỉ operator liên quan RIIC)</label>
-      <button id="addRowBtn" class="btn-ghost" type="button">+ Thêm Operator</button>
+      <div class="roster-head-btns">
+        <button id="openPickerBtn" class="btn-ghost btn-ghost-accent" type="button">☰ Chọn từ Database</button>
+        <button id="addRowBtn" class="btn-ghost" type="button">+ Thêm tay</button>
+      </div>
     </div>
 
     <div id="rosterTable" class="roster-table">
@@ -72,7 +75,7 @@
     <button id="analyzeBtn" class="btn-primary" type="button">
       <span class="btn-icon">▶</span> PHÂN TÍCH BASE
     </button>
-    <p class="hint">Gõ tên operator vào ô "Tên" — hệ thống tự nhận diện nếu operator đó nằm trong database combo nổi tiếng (Texas, Proviso, Pudding, Shamare...).</p>
+    <p class="hint">Bấm "☰ Chọn từ Database" để chọn operator theo class + elite bằng cách click (không cần gõ tay). Level/Skill không bắt buộc — chỉ Tên và Elite là quan trọng để phân tích combo.</p>
   </section>
 
   <!-- RIGHT: RESULTS -->
@@ -108,6 +111,34 @@
   <span>AK-BASE-OPTIMIZER · local Java backend + static frontend</span>
   <span>Dữ liệu operator là seed database — đối chiếu PRTS.wiki trước quyết định lớn</span>
 </footer>
+
+<div id="pickerOverlay" class="picker-overlay hidden">
+  <div class="picker-modal">
+    <div class="picker-header">
+      <div>
+        <span class="picker-eyebrow">DATABASE — 192 OPERATORS</span>
+        <h2 class="picker-title">CHỌN OPERATOR</h2>
+      </div>
+      <button id="closePickerBtn" class="picker-close" type="button">✕</button>
+    </div>
+
+    <div class="picker-toolbar">
+      <input id="pickerSearch" class="text-input" type="text" placeholder="Tìm tên operator...">
+      <span id="pickerSelectedCount" class="picker-count">0 đã chọn</span>
+    </div>
+
+    <div id="pickerBody" class="picker-body">
+      <!-- injected by JS, grouped by class -->
+    </div>
+
+    <div class="picker-footer">
+      <button id="pickerCancelBtn" class="btn-ghost" type="button">Huỷ</button>
+      <button id="pickerConfirmBtn" class="btn-primary picker-confirm" type="button">
+        <span class="btn-icon">✓</span> XÁC NHẬN (<span id="pickerConfirmCount">0</span>)
+      </button>
+    </div>
+  </div>
+</div>
 
 <script src="js/app.js"></script>
 </body>
