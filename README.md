@@ -1,16 +1,26 @@
 # AK Base Optimizer
 
+🇻🇳 Tiếng Việt (bạn đang đọc) · [🇬🇧 English](README.en.md)
+
 Công cụ phân tích & gợi ý combo RIIC (Base) cho Arknights dựa trên roster của bạn.
 Backend Java (không phụ thuộc thư viện ngoài) + Frontend HTML/CSS/JS chạy trong trình duyệt.
 
-![status](https://img.shields.io/badge/status-seed--project-orange)
+![status](https://img.shields.io/badge/status-active-orange) ![version](https://img.shields.io/badge/version-v0.3.0-blue)
 
 ## Tính năng
 
-- Nhập roster (tên, elite, level, skill) trực tiếp trên UI, không cần login/API key.
-- Tự động khớp roster với các **combo RIIC nổi tiếng**: Texas+Vermeil, Proviso Refill Squad
-  (Proviso/Tequila/Bibeak), Factory Gold Squad (Pudding/Waai Fu/Jaye/Kafka), Shamare, Scene/Bubble,
-  Podenco, Lancet-2, Castle-3, Quartz, Orchid/Mon3tr, Gravel/Purestream...
+- **Chọn operator bằng click** — modal picker liệt kê toàn bộ 192 operator trong database, nhóm
+  theo class đúng thứ tự trong base (Vanguard → Guard → Defender → Medic → Sniper → Caster →
+  Supporter → Specialist), có ô tìm kiếm. Click nút E0/E1/E2 để chọn + set Elite, bấm Xác nhận để
+  thêm hàng loạt vào roster 1 lần — **không cần gõ tay**. Elite hiển thị đúng giới hạn theo rarity
+  (1-2⭐ chỉ E0, 3⭐ tối đa E1, 4-6⭐ mới có E2).
+- **Bulk paste import** — dán nguyên list dạng text (`Texas E2 60 S2M3`, mỗi dòng 1 operator) vào ô
+  paste, hệ thống tự parse tên + elite (level/skill tuỳ chọn) và thêm hết vào roster cùng lúc.
+- **"+ Thêm tay"** — vẫn giữ cách nhập từng dòng thủ công cho operator chưa có trong database.
+- Tự động khớp roster với các **combo RIIC** dựa trên data thật từ game: Texas+Lappland,
+  Bibeak/Kafka Precious Metal, Vermeil Factory, Waai Fu Factory Stack, Shamare Solo Trading,
+  Scene/Bubble Factory, Purestream Power Plant, Jaye Trading Swing, Podenco/Lancet-2 Dorm,
+  Castle-3 Factory, Orchid Office+Trading, Gravel Precious Metal...
 - Phân loại mỗi combo: **đang hoạt động / cần nâng cấp / chưa sở hữu**.
 - Ước tính chi phí LMD để nâng elite operator còn thiếu, xếp **Priority S/A/B/C** theo ROI ước tính.
 - Gợi ý "nếu sau này có operator X thì chuyển sang combo Y".
@@ -29,7 +39,7 @@ Backend Java (không phụ thuộc thư viện ngoài) + Frontend HTML/CSS/JS ch
    17 operator đã được đối chiếu kỹ với mô tả effect thật (Texas, Vermeil, Bibeak, Gravel, Shamare,
    Scene, Bubble, Purestream, Waai Fu, Jaye, Kafka, Podenco, Lancet-2, Castle-3, Orchid). Phần lớn
    192 operator còn lại có đầy đủ data skill nhưng `combo_tags: []` — vẫn hiển thị được trong
-   `/api/operators` nhưng chưa được xếp vào combo nào trong `combos.json`.
+   `/api/operators` và chọn được trong picker, nhưng chưa được xếp vào combo nào trong `combos.json`.
 3. **Chi phí LMD nâng elite chỉ là ước tính trung bình theo rarity** (`Analyzer.java`), KHÔNG tính
    Chip, EXP, hay vật liệu chuyên biệt — vì bộ dữ liệu chi phí chính xác theo từng operator quá lớn
    để nhồi vào bản seed này. Luôn kiểm tra chi phí thật trong game trước khi quyết định nâng cấp lớn.
@@ -58,11 +68,11 @@ ak-base-optimizer/
 │   └── tools/
 │       └── generate_operators.py  # Script fetch + generate operators.json từ data thật
 ├── frontend/
-│   ├── index.html
+│   ├── index.html            # UI chính + modal picker + panel bulk paste
 │   ├── css/style.css
-│   └── js/app.js
-├── run.sh / run.bat         # Build + chạy server 1 lệnh
-└── README.md
+│   └── js/app.js             # Logic picker, bulk paste parser, gọi API, render kết quả
+├── run.sh / run.bat           # Build + chạy server 1 lệnh
+├── README.md / README.en.md
 ```
 
 ## Yêu cầu
@@ -95,6 +105,17 @@ javac -d out src/main/java/ak/base/*.java
 java -cp out ak.base.Server 8080
 ```
 
+## Cách nhập roster
+
+Có 3 cách, dùng kết hợp thoải mái:
+
+1. **Picker (khuyên dùng)** — bấm "☰ Chọn từ Database", tìm operator theo tên hoặc cuộn theo class,
+   click nút E0/E1/E2 để chọn, bấm "Xác nhận". Mở lại picker sau đó sẽ tự preload đúng elite hiện
+   tại của roster.
+2. **Bulk paste** — bấm "⎘ Dán danh sách", dán nhiều dòng dạng `Tên E<0-2> [level] [skill]`
+   (level/skill tuỳ chọn), bấm Import.
+3. **Thêm tay** — bấm "+ Thêm tay" để gõ từng dòng, dùng cho operator chưa có trong database.
+
 ## API
 
 Backend expose 3 endpoint JSON đơn giản (frontend gọi qua `fetch`):
@@ -109,8 +130,8 @@ Ví dụ `POST /api/analyze`:
 ```json
 {
   "roster": [
-    { "name": "Texas", "elite": 2, "level": 60, "skill": "S2M3" },
-    { "name": "Vermeil", "elite": 1, "level": 50 }
+    { "name": "Texas", "elite": 0, "level": 60, "skill": "S2M3" },
+    { "name": "Bibeak", "elite": 2 }
   ]
 }
 ```
@@ -131,23 +152,21 @@ Mở `backend/data/operators.json`, thêm object vào mảng `operators`:
       "room": "TradingPost",
       "elite_required": 2,
       "level_required": 1,
-      "skill_slot": 2,
-      "module_required": null,
       "effect": "Mô tả hiệu ứng",
-      "value_pct": 30,
       "combo_tags": ["ten_combo_tag"]
     }
   ]
 }
 ```
 
+`profession` phải là 1 trong 8 giá trị: `Vanguard`, `Guard`, `Defender`, `Medic`, `Sniper`, `Caster`,
+`Supporter`, `Specialist` — để operator hiện đúng nhóm trong picker.
+
 Nếu muốn operator này thuộc một combo mới, thêm định nghĩa tương ứng vào `backend/data/combos.json`
-với `tag` trùng với `combo_tags` ở trên. Không cần build lại gì — server đọc file JSON mỗi lần khởi động
-(khởi động lại server sau khi sửa data).
+với `tag` trùng với `combo_tags` ở trên. Không cần build lại gì — server đọc file JSON mỗi lần khởi
+động (khởi động lại server sau khi sửa data).
 
 ## Đưa lên GitHub
-
-Repo đã được khởi tạo local (`git init` + commit đầu tiên). Để đẩy lên GitHub của bạn:
 
 ```bash
 git remote add origin https://github.com/<username>/<ten-repo>.git
@@ -157,8 +176,9 @@ git push -u origin main
 
 ## Roadmap gợi ý (nếu muốn phát triển thêm)
 
-- Mở rộng `operators.json` cho đủ toàn bộ operator có base skill (dùng PRTS.wiki làm nguồn).
+- Mở rộng `operators.json` cho đủ operator mới (Proviso, Tequila, Quartz, Pudding...).
 - Thêm bảng chi phí elite chính xác theo từng operator (thay vì ước tính theo rarity).
 - Tính lợi nhuận/ngày thực tế (LMD hoặc EXP quy đổi) thay vì chỉ ước tính chi phí nâng cấp.
 - Cho phép lưu/tải roster dưới dạng file JSON để không phải nhập lại mỗi lần.
+- Import roster từ Krooster (krooster.com) — cần schema export chính xác trước khi viết importer.
 - Thêm chế độ so sánh nhiều hướng đầu tư (A/B/C) side-by-side như yêu cầu ban đầu.
