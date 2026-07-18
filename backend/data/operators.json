@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "note": "Auto-generated from Dimbreath/ArknightsData (en-US, archived snapshot). Covers operators released up to the archive date only -- newer operators (e.g. Proviso, Tequila, Quartz, Pudding) are NOT included and must be added manually. combo_tags are hand-curated (keyed by buffId) only for operators referenced in combos.json; most operators have empty combo_tags (raw data only).",
+    "note": "Auto-generated from Dimbreath/ArknightsData (en-US, archived snapshot). Covers operators released up to the archive date only -- newer operators (e.g. Proviso, Tequila, Quartz, Pudding) are NOT included and must be added manually. combo_tags are hand-curated (keyed by buffId) only for operators referenced in combos.json. char_id field enables matching against Krooster roster exports.",
     "source": "https://github.com/Dimbreath/ArknightsData (archived), building_data.json + character_table.json",
     "generated_by": "backend/tools/generate_operators.py",
     "operator_count": 192
@@ -8,6 +8,7 @@
   "operators": [
     {
       "name": "12F",
+      "char_id": "char_009_12fce",
       "rarity": 2,
       "profession": "Caster",
       "skills": [
@@ -33,6 +34,7 @@
     },
     {
       "name": "Aak",
+      "char_id": "char_225_haak",
       "rarity": 6,
       "profession": "Specialist",
       "skills": [
@@ -58,6 +60,7 @@
     },
     {
       "name": "Absinthe",
+      "char_id": "char_405_absin",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -83,6 +86,7 @@
     },
     {
       "name": "Aciddrop",
+      "char_id": "char_366_acdrop",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -108,6 +112,7 @@
     },
     {
       "name": "Adnachiel",
+      "char_id": "char_211_adnach",
       "rarity": 3,
       "profession": "Sniper",
       "skills": [
@@ -133,6 +138,7 @@
     },
     {
       "name": "Akafuyu",
+      "char_id": "char_475_akafyu",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -158,6 +164,7 @@
     },
     {
       "name": "Ambriel",
+      "char_id": "char_302_glaze",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -183,6 +190,7 @@
     },
     {
       "name": "Amiya",
+      "char_id": "char_002_amiya",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -208,6 +216,7 @@
     },
     {
       "name": "Andreana",
+      "char_id": "char_218_cuttle",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -233,6 +242,7 @@
     },
     {
       "name": "Angelina",
+      "char_id": "char_291_aglina",
       "rarity": 6,
       "profession": "Supporter",
       "skills": [
@@ -258,6 +268,7 @@
     },
     {
       "name": "Ansel",
+      "char_id": "char_212_ansel",
       "rarity": 3,
       "profession": "Medic",
       "skills": [
@@ -283,6 +294,7 @@
     },
     {
       "name": "Aosta",
+      "char_id": "char_346_aosta",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -308,6 +320,7 @@
     },
     {
       "name": "April",
+      "char_id": "char_365_aprl",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -342,6 +355,7 @@
     },
     {
       "name": "Archetto",
+      "char_id": "char_332_archet",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
@@ -367,6 +381,7 @@
     },
     {
       "name": "Arene",
+      "char_id": "char_271_spikes",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -401,6 +416,7 @@
     },
     {
       "name": "Asbestos",
+      "char_id": "char_378_asbest",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -426,6 +442,7 @@
     },
     {
       "name": "Ash",
+      "char_id": "char_456_ash",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
@@ -451,6 +468,7 @@
     },
     {
       "name": "Astesia",
+      "char_id": "char_274_astesi",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -476,6 +494,7 @@
     },
     {
       "name": "Ayerscarpe",
+      "char_id": "char_294_ayer",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -501,6 +520,7 @@
     },
     {
       "name": "Bagpipe",
+      "char_id": "char_222_bpipe",
       "rarity": 6,
       "profession": "Vanguard",
       "skills": [
@@ -526,6 +546,7 @@
     },
     {
       "name": "Beagle",
+      "char_id": "char_122_beagle",
       "rarity": 3,
       "profession": "Defender",
       "skills": [
@@ -551,6 +572,7 @@
     },
     {
       "name": "Beanstalk",
+      "char_id": "char_452_bstalk",
       "rarity": 4,
       "profession": "Vanguard",
       "skills": [
@@ -576,6 +598,7 @@
     },
     {
       "name": "Beehunter",
+      "char_id": "char_137_brownb",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -601,6 +624,7 @@
     },
     {
       "name": "Beeswax",
+      "char_id": "char_344_beewax",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -626,6 +650,7 @@
     },
     {
       "name": "Bibeak",
+      "char_id": "char_252_bibeak",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -653,6 +678,7 @@
     },
     {
       "name": "Bison",
+      "char_id": "char_325_bison",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -678,6 +704,7 @@
     },
     {
       "name": "Blaze",
+      "char_id": "char_017_huang",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -703,6 +730,7 @@
     },
     {
       "name": "Blemishine",
+      "char_id": "char_423_blemsh",
       "rarity": 6,
       "profession": "Defender",
       "skills": [
@@ -728,6 +756,7 @@
     },
     {
       "name": "Blitz",
+      "char_id": "char_457_blitz",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -753,6 +782,7 @@
     },
     {
       "name": "Blue Poison",
+      "char_id": "char_129_bluep",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -778,6 +808,7 @@
     },
     {
       "name": "Breeze",
+      "char_id": "char_275_breeze",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -803,6 +834,7 @@
     },
     {
       "name": "Broca",
+      "char_id": "char_356_broca",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -828,6 +860,7 @@
     },
     {
       "name": "Bubble",
+      "char_id": "char_381_bubble",
       "rarity": 4,
       "profession": "Defender",
       "skills": [
@@ -857,6 +890,7 @@
     },
     {
       "name": "Cardigan",
+      "char_id": "char_209_ardign",
       "rarity": 3,
       "profession": "Defender",
       "skills": [
@@ -882,6 +916,7 @@
     },
     {
       "name": "Castle-3",
+      "char_id": "char_286_cast3",
       "rarity": 1,
       "profession": "Guard",
       "skills": [
@@ -909,6 +944,7 @@
     },
     {
       "name": "Catapult",
+      "char_id": "char_282_catap",
       "rarity": 3,
       "profession": "Sniper",
       "skills": [
@@ -934,6 +970,7 @@
     },
     {
       "name": "Ceobe",
+      "char_id": "char_2013_cerber",
       "rarity": 6,
       "profession": "Caster",
       "skills": [
@@ -959,6 +996,7 @@
     },
     {
       "name": "Ceylon",
+      "char_id": "char_348_ceylon",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -984,6 +1022,7 @@
     },
     {
       "name": "Ch'en",
+      "char_id": "char_010_chen",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -1009,6 +1048,7 @@
     },
     {
       "name": "Chiave",
+      "char_id": "char_349_chiave",
       "rarity": 5,
       "profession": "Vanguard",
       "skills": [
@@ -1034,6 +1074,7 @@
     },
     {
       "name": "Click",
+      "char_id": "char_328_cammou",
       "rarity": 4,
       "profession": "Caster",
       "skills": [
@@ -1059,6 +1100,7 @@
     },
     {
       "name": "Cliffheart",
+      "char_id": "char_173_slchan",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -1084,6 +1126,7 @@
     },
     {
       "name": "Conviction",
+      "char_id": "char_159_peacok",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -1109,6 +1152,7 @@
     },
     {
       "name": "Courier",
+      "char_id": "char_198_blackd",
       "rarity": 4,
       "profession": "Vanguard",
       "skills": [
@@ -1134,6 +1178,7 @@
     },
     {
       "name": "Croissant",
+      "char_id": "char_201_moeshd",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -1159,6 +1204,7 @@
     },
     {
       "name": "Cuora",
+      "char_id": "char_150_snakek",
       "rarity": 4,
       "profession": "Defender",
       "skills": [
@@ -1184,6 +1230,7 @@
     },
     {
       "name": "Cutter",
+      "char_id": "char_301_cutter",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -1209,6 +1256,7 @@
     },
     {
       "name": "Deepcolor",
+      "char_id": "char_110_deepcl",
       "rarity": 4,
       "profession": "Supporter",
       "skills": [
@@ -1234,6 +1282,7 @@
     },
     {
       "name": "Dobermann",
+      "char_id": "char_130_doberm",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -1259,6 +1308,7 @@
     },
     {
       "name": "Dur-nar",
+      "char_id": "char_260_durnar",
       "rarity": 4,
       "profession": "Defender",
       "skills": [
@@ -1284,6 +1334,7 @@
     },
     {
       "name": "Durin",
+      "char_id": "char_501_durin",
       "rarity": 2,
       "profession": "Caster",
       "skills": [
@@ -1309,6 +1360,7 @@
     },
     {
       "name": "Dusk",
+      "char_id": "char_2015_dusk",
       "rarity": 6,
       "profession": "Caster",
       "skills": [
@@ -1334,6 +1386,7 @@
     },
     {
       "name": "Earthspirit",
+      "char_id": "char_183_skgoat",
       "rarity": 4,
       "profession": "Supporter",
       "skills": [
@@ -1368,6 +1421,7 @@
     },
     {
       "name": "Elysium",
+      "char_id": "char_401_elysm",
       "rarity": 5,
       "profession": "Vanguard",
       "skills": [
@@ -1393,6 +1447,7 @@
     },
     {
       "name": "Estelle",
+      "char_id": "char_127_estell",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -1418,6 +1473,7 @@
     },
     {
       "name": "Ethan",
+      "char_id": "char_355_ethan",
       "rarity": 4,
       "profession": "Specialist",
       "skills": [
@@ -1443,6 +1499,7 @@
     },
     {
       "name": "Eunectes",
+      "char_id": "char_416_zumama",
       "rarity": 6,
       "profession": "Defender",
       "skills": [
@@ -1477,6 +1534,7 @@
     },
     {
       "name": "Executor",
+      "char_id": "char_279_excu",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -1502,6 +1560,7 @@
     },
     {
       "name": "Exusiai",
+      "char_id": "char_103_angel",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
@@ -1527,6 +1586,7 @@
     },
     {
       "name": "Eyjafjalla",
+      "char_id": "char_180_amgoat",
       "rarity": 6,
       "profession": "Caster",
       "skills": [
@@ -1552,6 +1612,7 @@
     },
     {
       "name": "FEater",
+      "char_id": "char_241_panda",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -1579,6 +1640,7 @@
     },
     {
       "name": "Fang",
+      "char_id": "char_123_fang",
       "rarity": 3,
       "profession": "Vanguard",
       "skills": [
@@ -1604,6 +1666,7 @@
     },
     {
       "name": "Firewatch",
+      "char_id": "char_158_milu",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -1629,6 +1692,7 @@
     },
     {
       "name": "Flamebringer",
+      "char_id": "char_131_flameb",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -1654,6 +1718,7 @@
     },
     {
       "name": "Flint",
+      "char_id": "char_415_flint",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -1679,6 +1744,7 @@
     },
     {
       "name": "Folinic",
+      "char_id": "char_345_folnic",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -1704,6 +1770,7 @@
     },
     {
       "name": "Franka",
+      "char_id": "char_106_franka",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -1747,6 +1814,7 @@
     },
     {
       "name": "Frost",
+      "char_id": "char_458_rfrost",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -1772,6 +1840,7 @@
     },
     {
       "name": "Frostleaf",
+      "char_id": "char_193_frostl",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -1799,6 +1868,7 @@
     },
     {
       "name": "Gavial",
+      "char_id": "char_187_ccheal",
       "rarity": 4,
       "profession": "Medic",
       "skills": [
@@ -1824,6 +1894,7 @@
     },
     {
       "name": "Gitano",
+      "char_id": "char_109_fmout",
       "rarity": 4,
       "profession": "Caster",
       "skills": [
@@ -1851,6 +1922,7 @@
     },
     {
       "name": "Gladiia",
+      "char_id": "char_474_glady",
       "rarity": 6,
       "profession": "Specialist",
       "skills": [
@@ -1885,6 +1957,7 @@
     },
     {
       "name": "Glaucus",
+      "char_id": "char_326_glacus",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -1910,6 +1983,7 @@
     },
     {
       "name": "Grani",
+      "char_id": "char_220_grani",
       "rarity": 5,
       "profession": "Vanguard",
       "skills": [
@@ -1935,6 +2009,7 @@
     },
     {
       "name": "Gravel",
+      "char_id": "char_237_gravel",
       "rarity": 4,
       "profession": "Specialist",
       "skills": [
@@ -1962,6 +2037,7 @@
     },
     {
       "name": "GreyThroat",
+      "char_id": "char_367_swllow",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -1987,6 +2063,7 @@
     },
     {
       "name": "Greyy",
+      "char_id": "char_253_greyy",
       "rarity": 4,
       "profession": "Caster",
       "skills": [
@@ -2012,6 +2089,7 @@
     },
     {
       "name": "Gummy",
+      "char_id": "char_196_sunbr",
       "rarity": 4,
       "profession": "Defender",
       "skills": [
@@ -2037,6 +2115,7 @@
     },
     {
       "name": "Haze",
+      "char_id": "char_141_nights",
       "rarity": 4,
       "profession": "Caster",
       "skills": [
@@ -2062,6 +2141,7 @@
     },
     {
       "name": "Heavyrain",
+      "char_id": "char_304_zebra",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -2096,6 +2176,7 @@
     },
     {
       "name": "Hellagur",
+      "char_id": "char_188_helage",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -2139,6 +2220,7 @@
     },
     {
       "name": "Hibiscus",
+      "char_id": "char_120_hibisc",
       "rarity": 3,
       "profession": "Medic",
       "skills": [
@@ -2164,6 +2246,7 @@
     },
     {
       "name": "Hoshiguma",
+      "char_id": "char_136_hsguma",
       "rarity": 6,
       "profession": "Defender",
       "skills": [
@@ -2189,6 +2272,7 @@
     },
     {
       "name": "Hung",
+      "char_id": "char_226_hmau",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -2214,6 +2298,7 @@
     },
     {
       "name": "Ifrit",
+      "char_id": "char_134_ifrit",
       "rarity": 6,
       "profession": "Caster",
       "skills": [
@@ -2239,6 +2324,7 @@
     },
     {
       "name": "Indra",
+      "char_id": "char_155_tiger",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -2264,6 +2350,7 @@
     },
     {
       "name": "Iris",
+      "char_id": "char_338_iris",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -2289,6 +2376,7 @@
     },
     {
       "name": "Istina",
+      "char_id": "char_195_glassb",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -2314,6 +2402,7 @@
     },
     {
       "name": "Jackie",
+      "char_id": "char_347_jaksel",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -2339,6 +2428,7 @@
     },
     {
       "name": "Jaye",
+      "char_id": "char_272_strong",
       "rarity": 4,
       "profession": "Specialist",
       "skills": [
@@ -2366,6 +2456,7 @@
     },
     {
       "name": "Jessica",
+      "char_id": "char_235_jesica",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -2391,6 +2482,7 @@
     },
     {
       "name": "Kafka",
+      "char_id": "char_214_kafka",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -2418,6 +2510,7 @@
     },
     {
       "name": "Kal'tsit",
+      "char_id": "char_003_kalts",
       "rarity": 6,
       "profession": "Medic",
       "skills": [
@@ -2443,6 +2536,7 @@
     },
     {
       "name": "Kroos",
+      "char_id": "char_124_kroos",
       "rarity": 3,
       "profession": "Sniper",
       "skills": [
@@ -2468,6 +2562,7 @@
     },
     {
       "name": "Lancet-2",
+      "char_id": "char_285_medic2",
       "rarity": 1,
       "profession": "Medic",
       "skills": [
@@ -2495,6 +2590,7 @@
     },
     {
       "name": "Lappland",
+      "char_id": "char_140_whitew",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -2520,6 +2616,7 @@
     },
     {
       "name": "Lava",
+      "char_id": "char_121_lava",
       "rarity": 3,
       "profession": "Caster",
       "skills": [
@@ -2545,6 +2642,7 @@
     },
     {
       "name": "Lava the Purgatory",
+      "char_id": "char_1011_lava2",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -2570,6 +2668,7 @@
     },
     {
       "name": "Leizi",
+      "char_id": "char_306_leizi",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -2595,6 +2694,7 @@
     },
     {
       "name": "Leonhardt",
+      "char_id": "char_373_lionhd",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -2620,6 +2720,7 @@
     },
     {
       "name": "Liskarm",
+      "char_id": "char_107_liskam",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -2645,6 +2746,7 @@
     },
     {
       "name": "Magallan",
+      "char_id": "char_248_mgllan",
       "rarity": 6,
       "profession": "Supporter",
       "skills": [
@@ -2670,6 +2772,7 @@
     },
     {
       "name": "Manticore",
+      "char_id": "char_215_mantic",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -2695,6 +2798,7 @@
     },
     {
       "name": "Matoimaru",
+      "char_id": "char_289_gyuki",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -2720,6 +2824,7 @@
     },
     {
       "name": "Matterhorn",
+      "char_id": "char_199_yak",
       "rarity": 4,
       "profession": "Defender",
       "skills": [
@@ -2745,6 +2850,7 @@
     },
     {
       "name": "May",
+      "char_id": "char_133_mm",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -2770,6 +2876,7 @@
     },
     {
       "name": "Mayer",
+      "char_id": "char_242_otter",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -2795,6 +2902,7 @@
     },
     {
       "name": "Melantha",
+      "char_id": "char_208_melan",
       "rarity": 3,
       "profession": "Guard",
       "skills": [
@@ -2822,6 +2930,7 @@
     },
     {
       "name": "Meteor",
+      "char_id": "char_126_shotst",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -2847,6 +2956,7 @@
     },
     {
       "name": "Meteorite",
+      "char_id": "char_219_meteo",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -2872,6 +2982,7 @@
     },
     {
       "name": "Midnight",
+      "char_id": "char_283_midn",
       "rarity": 3,
       "profession": "Guard",
       "skills": [
@@ -2897,6 +3008,7 @@
     },
     {
       "name": "Mint",
+      "char_id": "char_388_mint",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -2931,6 +3043,7 @@
     },
     {
       "name": "Mostima",
+      "char_id": "char_213_mostma",
       "rarity": 6,
       "profession": "Caster",
       "skills": [
@@ -2956,6 +3069,7 @@
     },
     {
       "name": "Mountain",
+      "char_id": "char_264_f12yin",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -2981,6 +3095,7 @@
     },
     {
       "name": "Mousse",
+      "char_id": "char_185_frncat",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -3006,6 +3121,7 @@
     },
     {
       "name": "Mr. Nothing",
+      "char_id": "char_455_nothin",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -3031,6 +3147,7 @@
     },
     {
       "name": "Mudrock",
+      "char_id": "char_311_mudrok",
       "rarity": 6,
       "profession": "Defender",
       "skills": [
@@ -3056,6 +3173,7 @@
     },
     {
       "name": "Myrrh",
+      "char_id": "char_117_myrrh",
       "rarity": 4,
       "profession": "Medic",
       "skills": [
@@ -3081,6 +3199,7 @@
     },
     {
       "name": "Myrtle",
+      "char_id": "char_151_myrtle",
       "rarity": 4,
       "profession": "Vanguard",
       "skills": [
@@ -3106,6 +3225,7 @@
     },
     {
       "name": "Nearl",
+      "char_id": "char_148_nearl",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -3131,6 +3251,7 @@
     },
     {
       "name": "Nian",
+      "char_id": "char_2014_nian",
       "rarity": 6,
       "profession": "Defender",
       "skills": [
@@ -3156,6 +3277,7 @@
     },
     {
       "name": "Nightingale",
+      "char_id": "char_179_cgbird",
       "rarity": 6,
       "profession": "Medic",
       "skills": [
@@ -3181,6 +3303,7 @@
     },
     {
       "name": "Nightmare",
+      "char_id": "char_164_nightm",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -3206,6 +3329,7 @@
     },
     {
       "name": "Noir Corne",
+      "char_id": "char_500_noirc",
       "rarity": 2,
       "profession": "Defender",
       "skills": [
@@ -3231,6 +3355,7 @@
     },
     {
       "name": "Orchid",
+      "char_id": "char_278_orchid",
       "rarity": 3,
       "profession": "Supporter",
       "skills": [
@@ -3258,6 +3383,7 @@
     },
     {
       "name": "Passenger",
+      "char_id": "char_472_pasngr",
       "rarity": 6,
       "profession": "Caster",
       "skills": [
@@ -3292,6 +3418,7 @@
     },
     {
       "name": "Perfumer",
+      "char_id": "char_181_flower",
       "rarity": 4,
       "profession": "Medic",
       "skills": [
@@ -3317,6 +3444,7 @@
     },
     {
       "name": "Phantom",
+      "char_id": "char_250_phatom",
       "rarity": 6,
       "profession": "Specialist",
       "skills": [
@@ -3342,6 +3470,7 @@
     },
     {
       "name": "Pinecone",
+      "char_id": "char_440_pinecn",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -3367,6 +3496,7 @@
     },
     {
       "name": "Platinum",
+      "char_id": "char_204_platnm",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -3392,6 +3522,7 @@
     },
     {
       "name": "Plume",
+      "char_id": "char_192_falco",
       "rarity": 3,
       "profession": "Vanguard",
       "skills": [
@@ -3417,6 +3548,7 @@
     },
     {
       "name": "Podenco",
+      "char_id": "char_258_podego",
       "rarity": 4,
       "profession": "Supporter",
       "skills": [
@@ -3453,6 +3585,7 @@
     },
     {
       "name": "Popukar",
+      "char_id": "char_281_popka",
       "rarity": 3,
       "profession": "Guard",
       "skills": [
@@ -3478,6 +3611,7 @@
     },
     {
       "name": "Pramanix",
+      "char_id": "char_174_slbell",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -3503,6 +3637,7 @@
     },
     {
       "name": "Projekt Red",
+      "char_id": "char_144_red",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -3528,6 +3663,7 @@
     },
     {
       "name": "Provence",
+      "char_id": "char_145_prove",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -3553,6 +3689,7 @@
     },
     {
       "name": "Ptilopsis",
+      "char_id": "char_128_plosis",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -3578,6 +3715,7 @@
     },
     {
       "name": "Purestream",
+      "char_id": "char_385_finlpp",
       "rarity": 4,
       "profession": "Medic",
       "skills": [
@@ -3605,6 +3743,7 @@
     },
     {
       "name": "Rangers",
+      "char_id": "char_503_rang",
       "rarity": 2,
       "profession": "Sniper",
       "skills": [
@@ -3630,6 +3769,7 @@
     },
     {
       "name": "Reed",
+      "char_id": "char_261_sddrag",
       "rarity": 5,
       "profession": "Vanguard",
       "skills": [
@@ -3655,6 +3795,7 @@
     },
     {
       "name": "Robin",
+      "char_id": "char_451_robin",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -3680,6 +3821,7 @@
     },
     {
       "name": "Rope",
+      "char_id": "char_236_rope",
       "rarity": 4,
       "profession": "Specialist",
       "skills": [
@@ -3705,6 +3847,7 @@
     },
     {
       "name": "Rosa",
+      "char_id": "char_197_poca",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
@@ -3730,6 +3873,7 @@
     },
     {
       "name": "Rosmontis",
+      "char_id": "char_391_rosmon",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
@@ -3764,6 +3908,7 @@
     },
     {
       "name": "Saga",
+      "char_id": "char_362_saga",
       "rarity": 6,
       "profession": "Vanguard",
       "skills": [
@@ -3789,6 +3934,7 @@
     },
     {
       "name": "Saria",
+      "char_id": "char_202_demkni",
       "rarity": 6,
       "profession": "Defender",
       "skills": [
@@ -3814,6 +3960,7 @@
     },
     {
       "name": "Savage",
+      "char_id": "char_230_savage",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -3839,6 +3986,7 @@
     },
     {
       "name": "Scavenger",
+      "char_id": "char_149_scave",
       "rarity": 4,
       "profession": "Vanguard",
       "skills": [
@@ -3864,6 +4012,7 @@
     },
     {
       "name": "Scene",
+      "char_id": "char_336_folivo",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -3891,6 +4040,7 @@
     },
     {
       "name": "Schwarz",
+      "char_id": "char_340_shwaz",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
@@ -3916,6 +4066,7 @@
     },
     {
       "name": "Sesa",
+      "char_id": "char_379_sesa",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -3941,6 +4092,7 @@
     },
     {
       "name": "Shamare",
+      "char_id": "char_254_vodfox",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -3968,6 +4120,7 @@
     },
     {
       "name": "Shaw",
+      "char_id": "char_277_sqrrel",
       "rarity": 4,
       "profession": "Specialist",
       "skills": [
@@ -3993,6 +4146,7 @@
     },
     {
       "name": "Shining",
+      "char_id": "char_147_shining",
       "rarity": 6,
       "profession": "Medic",
       "skills": [
@@ -4018,6 +4172,7 @@
     },
     {
       "name": "Shirayuki",
+      "char_id": "char_118_yuki",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -4045,6 +4200,7 @@
     },
     {
       "name": "Sideroca",
+      "char_id": "char_333_sidero",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -4070,6 +4226,7 @@
     },
     {
       "name": "Siege",
+      "char_id": "char_112_siege",
       "rarity": 6,
       "profession": "Vanguard",
       "skills": [
@@ -4095,6 +4252,7 @@
     },
     {
       "name": "Silence",
+      "char_id": "char_108_silent",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -4120,6 +4278,7 @@
     },
     {
       "name": "SilverAsh",
+      "char_id": "char_172_svrash",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -4145,6 +4304,7 @@
     },
     {
       "name": "Skadi",
+      "char_id": "char_263_skadi",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -4170,6 +4330,7 @@
     },
     {
       "name": "Skadi the Corrupting Heart",
+      "char_id": "char_1012_skadi2",
       "rarity": 6,
       "profession": "Supporter",
       "skills": [
@@ -4204,6 +4365,7 @@
     },
     {
       "name": "Skyfire",
+      "char_id": "char_166_skfire",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -4229,6 +4391,7 @@
     },
     {
       "name": "Snowsant",
+      "char_id": "char_383_snsant",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -4254,6 +4417,7 @@
     },
     {
       "name": "Sora",
+      "char_id": "char_101_sora",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -4279,6 +4443,7 @@
     },
     {
       "name": "Specter",
+      "char_id": "char_143_ghost",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -4304,6 +4469,7 @@
     },
     {
       "name": "Spot",
+      "char_id": "char_284_spot",
       "rarity": 3,
       "profession": "Defender",
       "skills": [
@@ -4329,6 +4495,7 @@
     },
     {
       "name": "Steward",
+      "char_id": "char_210_stward",
       "rarity": 3,
       "profession": "Caster",
       "skills": [
@@ -4354,6 +4521,7 @@
     },
     {
       "name": "Surtr",
+      "char_id": "char_350_surtr",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -4379,6 +4547,7 @@
     },
     {
       "name": "Sussurro",
+      "char_id": "char_298_susuro",
       "rarity": 4,
       "profession": "Medic",
       "skills": [
@@ -4404,6 +4573,7 @@
     },
     {
       "name": "Suzuran",
+      "char_id": "char_358_lisa",
       "rarity": 6,
       "profession": "Supporter",
       "skills": [
@@ -4429,6 +4599,7 @@
     },
     {
       "name": "Swire",
+      "char_id": "char_308_swire",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -4454,6 +4625,7 @@
     },
     {
       "name": "THRM-EX",
+      "char_id": "char_376_therex",
       "rarity": 1,
       "profession": "Specialist",
       "skills": [
@@ -4479,6 +4651,7 @@
     },
     {
       "name": "Tachanka",
+      "char_id": "char_459_tachak",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -4504,6 +4677,7 @@
     },
     {
       "name": "Texas",
+      "char_id": "char_102_texas",
       "rarity": 5,
       "profession": "Vanguard",
       "skills": [
@@ -4531,6 +4705,7 @@
     },
     {
       "name": "Thorns",
+      "char_id": "char_293_thorns",
       "rarity": 6,
       "profession": "Guard",
       "skills": [
@@ -4556,6 +4731,7 @@
     },
     {
       "name": "Toddifons",
+      "char_id": "char_363_toddi",
       "rarity": 5,
       "profession": "Sniper",
       "skills": [
@@ -4581,6 +4757,7 @@
     },
     {
       "name": "Tomimi",
+      "char_id": "char_411_tomimi",
       "rarity": 5,
       "profession": "Caster",
       "skills": [
@@ -4606,6 +4783,7 @@
     },
     {
       "name": "Tsukinogi",
+      "char_id": "char_343_tknogi",
       "rarity": 5,
       "profession": "Supporter",
       "skills": [
@@ -4631,6 +4809,7 @@
     },
     {
       "name": "Tuye",
+      "char_id": "char_402_tuye",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -4656,6 +4835,7 @@
     },
     {
       "name": "Utage",
+      "char_id": "char_337_utage",
       "rarity": 4,
       "profession": "Guard",
       "skills": [
@@ -4681,6 +4861,7 @@
     },
     {
       "name": "Vanilla",
+      "char_id": "char_240_wyvern",
       "rarity": 3,
       "profession": "Vanguard",
       "skills": [
@@ -4706,6 +4887,7 @@
     },
     {
       "name": "Vermeil",
+      "char_id": "char_190_clour",
       "rarity": 4,
       "profession": "Sniper",
       "skills": [
@@ -4735,6 +4917,7 @@
     },
     {
       "name": "Vigna",
+      "char_id": "char_290_vigna",
       "rarity": 4,
       "profession": "Vanguard",
       "skills": [
@@ -4762,6 +4945,7 @@
     },
     {
       "name": "Vulcan",
+      "char_id": "char_163_hpsts",
       "rarity": 5,
       "profession": "Defender",
       "skills": [
@@ -4787,6 +4971,7 @@
     },
     {
       "name": "W",
+      "char_id": "char_113_cqbw",
       "rarity": 6,
       "profession": "Sniper",
       "skills": [
@@ -4821,6 +5006,7 @@
     },
     {
       "name": "Waai Fu",
+      "char_id": "char_243_waaifu",
       "rarity": 5,
       "profession": "Specialist",
       "skills": [
@@ -4848,6 +5034,7 @@
     },
     {
       "name": "Warfarin",
+      "char_id": "char_171_bldsk",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -4873,6 +5060,7 @@
     },
     {
       "name": "Weedy",
+      "char_id": "char_400_weedy",
       "rarity": 6,
       "profession": "Specialist",
       "skills": [
@@ -4898,6 +5086,7 @@
     },
     {
       "name": "Whislash",
+      "char_id": "char_265_sophia",
       "rarity": 5,
       "profession": "Guard",
       "skills": [
@@ -4923,6 +5112,7 @@
     },
     {
       "name": "Whisperain",
+      "char_id": "char_436_whispr",
       "rarity": 5,
       "profession": "Medic",
       "skills": [
@@ -4948,6 +5138,7 @@
     },
     {
       "name": "Yato",
+      "char_id": "char_502_nblade",
       "rarity": 2,
       "profession": "Vanguard",
       "skills": [
@@ -4973,6 +5164,7 @@
     },
     {
       "name": "Zima",
+      "char_id": "char_115_headbr",
       "rarity": 5,
       "profession": "Vanguard",
       "skills": [

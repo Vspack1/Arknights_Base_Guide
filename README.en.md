@@ -19,6 +19,12 @@ Java backend (zero external dependencies) + HTML/CSS/JS frontend running in the 
   the paste box; the app parses name + elite (level/skill are optional) and adds everything at once.
 - **"+ Add manually"** — still available for typing individual rows, useful for operators not yet
   in the database.
+- **Import from Krooster** — the "⇩ Import Krooster" button: paste JSON copied from your Collection
+  page on [krooster.com](https://www.krooster.com) (via DevTools → the `__NEXT_DATA__` script tag),
+  and the app automatically matches operators by their real `char_id` and imports your whole real
+  roster (elite + level) in one paste — no Yostar login happens inside this app; you log into
+  Krooster yourself (a trusted, open-source community site) and just copy data already public on
+  your own profile page.
 - Automatically matches your roster against **RIIC combos** built from real in-game data: Texas +
   Lappland, Bibeak/Kafka Precious Metal, Vermeil Factory, Waai Fu Factory Stack, Shamare Solo
   Trading, Scene/Bubble Factory, Purestream Power Plant, Jaye Trading Swing, Podenco/Lancet-2 Dorm,
@@ -123,6 +129,16 @@ Three methods, freely combinable:
    (level/skill optional), then click Import.
 3. **Manual add** — click "+ Add manually" to type individual rows, useful for operators not yet in
    the database.
+4. **Import from Krooster** — click "⇩ Import Krooster":
+   1. Go to [krooster.com](https://www.krooster.com), log in, open your Collection page.
+   2. Open DevTools (F12) → Network tab → reload the page → click the first request (the HTML
+      document, largest one).
+   3. In the Response tab, find `<script id="__NEXT_DATA__">` and copy the JSON inside it.
+      (Faster: open the Console and run
+      `copy(document.getElementById('__NEXT_DATA__').textContent)` to copy it straight to your
+      clipboard.)
+   4. Paste it into the Krooster import box and click Import — the app matches by `char_id` and
+      fills in your real elite/level values.
 
 ## API
 
@@ -189,6 +205,4 @@ git push -u origin main
 - Add an accurate per-operator elite-cost table instead of the rarity-based estimate.
 - Compute real daily profit (LMD or EXP-equivalent) instead of just upgrade cost.
 - Allow saving/loading the roster as a JSON file so it doesn't need re-entering every time.
-- Import roster from Krooster (krooster.com) — needs the exact export schema before an importer
-  can be written safely.
 - Add side-by-side comparison of multiple investment directions (A/B/C) as originally requested.

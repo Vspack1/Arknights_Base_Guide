@@ -110,6 +110,7 @@ def main():
         if skills:
             operators.append({
                 'name': name,
+                'char_id': cid,
                 'rarity': rarity,
                 'profession': profession,
                 'skills': skills

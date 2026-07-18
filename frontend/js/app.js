@@ -128,6 +128,12 @@ function parseRosterLine(line) {
 
 document.getElementById('togglePasteBtn').addEventListener('click', () => {
   document.getElementById('pasteBulkPanel').classList.toggle('hidden');
+  document.getElementById('kroosterPanel').classList.add('hidden');
+});
+
+document.getElementById('toggleKroosterBtn').addEventListener('click', () => {
+  document.getElementById('kroosterPanel').classList.toggle('hidden');
+  document.getElementById('pasteBulkPanel').classList.add('hidden');
 });
 
 document.getElementById('pasteBulkImportBtn').addEventListener('click', () => {
@@ -145,6 +151,54 @@ document.getElementById('pasteBulkImportBtn').addEventListener('click', () => {
     ? `Đã thêm ${ok} operator, ${failed} dòng không nhận diện được (thiếu E0/E1/E2?)`
     : `Đã thêm ${ok} operator.`;
   if (ok > 0) document.getElementById('pasteBulkInput').value = '';
+});
+
+// ---------- Krooster import ----------
+// Chấp nhận nhiều dạng paste: toàn bộ __NEXT_DATA__, hoặc chỉ object "data", hoặc chỉ object "roster".
+function extractKroosterRoster(obj) {
+  if (!obj || typeof obj !== 'object') return null;
+  if (obj.props && obj.props.pageProps && obj.props.pageProps.data && obj.props.pageProps.data.roster) {
+    return obj.props.pageProps.data.roster;
+  }
+  if (obj.pageProps && obj.pageProps.data && obj.pageProps.data.roster) return obj.pageProps.data.roster;
+  if (obj.data && obj.data.roster) return obj.data.roster;
+  if (obj.roster) return obj.roster;
+  const keys = Object.keys(obj);
+  if (keys.length > 0 && keys.every(k => k.startsWith('char_'))) return obj;
+  return null;
+}
+
+document.getElementById('kroosterImportBtn').addEventListener('click', () => {
+  const text = document.getElementById('kroosterInput').value.trim();
+  const status = document.getElementById('kroosterStatus');
+  if (!text) { status.textContent = 'Chưa dán dữ liệu.'; return; }
+
+  let parsed;
+  try {
+    parsed = JSON.parse(text);
+  } catch (e) {
+    status.textContent = 'JSON không hợp lệ — kiểm tra lại đã copy đủ chưa.';
+    return;
+  }
+
+  const roster = extractKroosterRoster(parsed);
+  if (!roster) {
+    status.textContent = 'Không tìm thấy dữ liệu roster trong JSON đã dán.';
+    return;
+  }
+
+  let matched = 0, skipped = 0;
+  Object.entries(roster).forEach(([charId, entry]) => {
+    const op = allOperators.find(o => o.char_id === charId);
+    if (!op) { skipped++; return; }
+    upsertRosterRow(op.name, entry.elite || 0, entry.level || '', '');
+    matched++;
+  });
+
+  status.textContent = `Đã import ${matched} operator.` + (skipped > 0
+    ? ` ${skipped} operator trong Krooster chưa có trong database (operator mới hơn snapshot data).`
+    : '');
+  if (matched > 0) document.getElementById('kroosterInput').value = '';
 });
 
 // ---------- Operator Picker Modal ----------

@@ -17,6 +17,11 @@ Backend Java (không phụ thuộc thư viện ngoài) + Frontend HTML/CSS/JS ch
 - **Bulk paste import** — dán nguyên list dạng text (`Texas E2 60 S2M3`, mỗi dòng 1 operator) vào ô
   paste, hệ thống tự parse tên + elite (level/skill tuỳ chọn) và thêm hết vào roster cùng lúc.
 - **"+ Thêm tay"** — vẫn giữ cách nhập từng dòng thủ công cho operator chưa có trong database.
+- **Import từ Krooster** — nút "⇩ Import Krooster": dán JSON lấy từ trang Collection của
+  [krooster.com](https://www.krooster.com) (qua DevTools → thẻ `__NEXT_DATA__`), tự động khớp theo
+  `char_id` game gốc và import toàn bộ roster thật của bạn (elite + level) chỉ trong 1 lần dán —
+  không cần Yostar login qua app này, bạn tự đăng nhập trên Krooster (site cộng đồng uy tín, mã
+  nguồn mở) rồi chỉ copy data đã public sẵn trên trang cá nhân của bạn.
 - Tự động khớp roster với các **combo RIIC** dựa trên data thật từ game: Texas+Lappland,
   Bibeak/Kafka Precious Metal, Vermeil Factory, Waai Fu Factory Stack, Shamare Solo Trading,
   Scene/Bubble Factory, Purestream Power Plant, Jaye Trading Swing, Podenco/Lancet-2 Dorm,
@@ -115,6 +120,13 @@ Có 3 cách, dùng kết hợp thoải mái:
 2. **Bulk paste** — bấm "⎘ Dán danh sách", dán nhiều dòng dạng `Tên E<0-2> [level] [skill]`
    (level/skill tuỳ chọn), bấm Import.
 3. **Thêm tay** — bấm "+ Thêm tay" để gõ từng dòng, dùng cho operator chưa có trong database.
+4. **Import từ Krooster** — bấm "⇩ Import Krooster":
+   1. Vào [krooster.com](https://www.krooster.com), đăng nhập, vào trang Collection của bạn.
+   2. Mở DevTools (F12) → tab Network → reload trang → click request đầu tiên (HTML, nặng nhất).
+   3. Tab Response, tìm thẻ `<script id="__NEXT_DATA__">`, copy toàn bộ nội dung JSON bên trong.
+      (Cách nhanh hơn: mở Console, chạy `copy(document.getElementById('__NEXT_DATA__').textContent)`
+      để tự copy vào clipboard.)
+   4. Dán vào ô Import Krooster, bấm Import — app tự khớp theo `char_id` và điền elite/level thật.
 
 ## API
 
@@ -180,5 +192,4 @@ git push -u origin main
 - Thêm bảng chi phí elite chính xác theo từng operator (thay vì ước tính theo rarity).
 - Tính lợi nhuận/ngày thực tế (LMD hoặc EXP quy đổi) thay vì chỉ ước tính chi phí nâng cấp.
 - Cho phép lưu/tải roster dưới dạng file JSON để không phải nhập lại mỗi lần.
-- Import roster từ Krooster (krooster.com) — cần schema export chính xác trước khi viết importer.
 - Thêm chế độ so sánh nhiều hướng đầu tư (A/B/C) side-by-side như yêu cầu ban đầu.

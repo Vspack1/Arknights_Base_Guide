@@ -60,6 +60,7 @@
       <div class="roster-head-btns">
         <button id="openPickerBtn" class="btn-ghost btn-ghost-accent" type="button">☰ Chọn từ Database</button>
         <button id="togglePasteBtn" class="btn-ghost" type="button">⎘ Dán danh sách</button>
+        <button id="toggleKroosterBtn" class="btn-ghost" type="button">⇩ Import Krooster</button>
         <button id="addRowBtn" class="btn-ghost" type="button">+ Thêm tay</button>
       </div>
     </div>
@@ -69,6 +70,21 @@
       <div class="paste-bulk-actions">
         <span id="pasteBulkStatus" class="paste-bulk-status"></span>
         <button id="pasteBulkImportBtn" class="btn-ghost btn-ghost-accent" type="button">Import</button>
+      </div>
+    </div>
+
+    <div id="kroosterPanel" class="paste-bulk-panel hidden">
+      <p class="krooster-hint">
+        Vào <a href="https://www.krooster.com" target="_blank" rel="noopener">krooster.com</a> → đăng nhập →
+        vào trang <strong>Collection</strong> của bạn → mở DevTools (F12) → tab <strong>Network</strong> →
+        reload trang → tìm request đầu tiên (file HTML nặng nhất) → tab Response → copy nội dung thẻ
+        <code>&lt;script id="__NEXT_DATA__"&gt;</code>. Hoặc dùng Console:
+        <code>copy(document.getElementById('__NEXT_DATA__').textContent)</code> rồi dán vào đây.
+      </p>
+      <textarea id="kroosterInput" class="paste-textarea" rows="5" placeholder='Dán JSON từ Krooster vào đây...'></textarea>
+      <div class="paste-bulk-actions">
+        <span id="kroosterStatus" class="paste-bulk-status"></span>
+        <button id="kroosterImportBtn" class="btn-ghost btn-ghost-accent" type="button">Import</button>
       </div>
     </div>
 

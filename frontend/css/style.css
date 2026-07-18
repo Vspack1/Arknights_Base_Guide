@@ -436,6 +436,21 @@ body::before {
 }
 .paste-bulk-status { font-size: 11px; color: var(--text-lo); }
 
+.krooster-hint {
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin: 0 0 8px;
+}
+.krooster-hint a { color: var(--cyan); }
+.krooster-hint code {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  padding: 1px 5px;
+  font-size: 10px;
+  color: var(--accent);
+}
+
 /* ---------- Roster head buttons ---------- */
 .roster-head-btns { display: flex; gap: 8px; }
 .btn-ghost-accent { border-color: var(--accent-dim); color: var(--accent); }
