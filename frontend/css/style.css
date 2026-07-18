@@ -414,6 +414,28 @@ body::before {
 }
 .future-item strong { color: var(--text-hi); }
 
+/* ---------- Paste bulk import ---------- */
+.paste-bulk-panel { padding: 10px 20px 0; }
+.paste-textarea {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-hi);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 10px;
+  outline: none;
+  resize: vertical;
+}
+.paste-textarea:focus { border-color: var(--accent); }
+.paste-bulk-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.paste-bulk-status { font-size: 11px; color: var(--text-lo); }
+
 /* ---------- Roster head buttons ---------- */
 .roster-head-btns { display: flex; gap: 8px; }
 .btn-ghost-accent { border-color: var(--accent-dim); color: var(--accent); }

@@ -11,6 +11,13 @@ const CLASS_LABEL_VI = {
 };
 let pickerSelections = {}; // name -> elite (0/1/2)
 
+// Elite cap theo rarity: 1-2 sao chỉ E0, 3 sao tối đa E1, 4-6 sao tối đa E2
+function maxEliteForRarity(rarity) {
+  if (rarity <= 2) return 0;
+  if (rarity === 3) return 1;
+  return 2;
+}
+
 // ---------- Clock ----------
 function tickClock() {
   const el = document.getElementById('clock');
@@ -55,20 +62,40 @@ function addRosterRow(prefill) {
   `;
   row.querySelector('.f-elite').value = prefill?.elite ?? 0;
   row.querySelector('.row-remove').addEventListener('click', () => row.remove());
+
+  const nameInput = row.querySelector('.f-name');
+  const eliteSelect = row.querySelector('.f-elite');
+  function restrictEliteByName() {
+    const op = allOperators.find(o => o.name.toLowerCase() === nameInput.value.trim().toLowerCase());
+    const opts = eliteSelect.querySelectorAll('option');
+    if (!op) {
+      opts.forEach(o => o.disabled = false);
+      return;
+    }
+    const maxElite = maxEliteForRarity(op.rarity || 0);
+    opts.forEach(o => { o.disabled = parseInt(o.value, 10) > maxElite; });
+    if (parseInt(eliteSelect.value, 10) > maxElite) eliteSelect.value = String(maxElite);
+  }
+  nameInput.addEventListener('input', restrictEliteByName);
+  nameInput.addEventListener('change', restrictEliteByName);
+  if (prefill?.name) restrictEliteByName();
+
   wrap.appendChild(row);
 }
 
 document.getElementById('addRowBtn').addEventListener('click', () => addRosterRow());
 
-function upsertRosterRow(name, elite) {
+function upsertRosterRow(name, elite, level, skill) {
   const rows = document.querySelectorAll('.roster-row:not(.roster-row-head)');
   for (const row of rows) {
     if (row.querySelector('.f-name').value.trim().toLowerCase() === name.toLowerCase()) {
       row.querySelector('.f-elite').value = elite;
+      if (level) row.querySelector('.f-level').value = level;
+      if (skill) row.querySelector('.f-skill').value = skill;
       return;
     }
   }
-  addRosterRow({ name, elite });
+  addRosterRow({ name, elite, level, skill });
 }
 
 function removeRosterRowByName(name) {
@@ -80,6 +107,45 @@ function removeRosterRowByName(name) {
     }
   }
 }
+
+// ---------- Bulk paste import ----------
+// Parse dòng dạng "Texas E2 60 S2M3" -- chỉ Tên + Elite là bắt buộc, level/skill tuỳ chọn.
+function parseRosterLine(line) {
+  const tokens = line.trim().split(/\s+/).filter(Boolean);
+  const eliteIdx = tokens.findIndex(t => /^E[0-2]$/i.test(t));
+  if (eliteIdx === -1 || eliteIdx === 0) return null;
+  const name = tokens.slice(0, eliteIdx).join(' ');
+  const elite = parseInt(tokens[eliteIdx].slice(1), 10);
+  let level = '';
+  let skill = '';
+  for (let i = eliteIdx + 1; i < tokens.length; i++) {
+    const t = tokens[i];
+    if (/^\d+$/.test(t) && !level) level = t;
+    else if (/^S\d/i.test(t) && !skill) skill = t;
+  }
+  return { name, elite, level, skill };
+}
+
+document.getElementById('togglePasteBtn').addEventListener('click', () => {
+  document.getElementById('pasteBulkPanel').classList.toggle('hidden');
+});
+
+document.getElementById('pasteBulkImportBtn').addEventListener('click', () => {
+  const text = document.getElementById('pasteBulkInput').value;
+  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+  let ok = 0, failed = 0;
+  lines.forEach(line => {
+    const parsed = parseRosterLine(line);
+    if (!parsed) { failed++; return; }
+    upsertRosterRow(parsed.name, parsed.elite, parsed.level, parsed.skill);
+    ok++;
+  });
+  const status = document.getElementById('pasteBulkStatus');
+  status.textContent = failed > 0
+    ? `Đã thêm ${ok} operator, ${failed} dòng không nhận diện được (thiếu E0/E1/E2?)`
+    : `Đã thêm ${ok} operator.`;
+  if (ok > 0) document.getElementById('pasteBulkInput').value = '';
+});
 
 // ---------- Operator Picker Modal ----------
 const pickerOverlay = document.getElementById('pickerOverlay');
@@ -156,11 +222,14 @@ function renderPickerOpRow(op) {
   const selected = pickerSelections.hasOwnProperty(op.name);
   const curElite = pickerSelections[op.name];
   const stars = '★'.repeat(op.rarity || 0);
+  const maxElite = maxEliteForRarity(op.rarity || 0);
+  const eliteOptions = [];
+  for (let e = 0; e <= maxElite; e++) eliteOptions.push(e);
   return `
     <div class="picker-op-row ${selected ? 'selected' : ''}">
       <span class="picker-op-name">${esc(op.name)} <span class="picker-op-rarity">${stars}</span></span>
       <div class="elite-toggle">
-        ${[0, 1, 2].map(e => `
+        ${eliteOptions.map(e => `
           <button type="button" class="elite-btn ${selected && curElite === e ? 'active' : ''}"
             data-name="${esc(op.name)}" data-elite="${e}">E${e}</button>
         `).join('')}

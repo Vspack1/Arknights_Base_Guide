@@ -59,7 +59,16 @@
       <label class="field-label">Roster (chỉ operator liên quan RIIC)</label>
       <div class="roster-head-btns">
         <button id="openPickerBtn" class="btn-ghost btn-ghost-accent" type="button">☰ Chọn từ Database</button>
+        <button id="togglePasteBtn" class="btn-ghost" type="button">⎘ Dán danh sách</button>
         <button id="addRowBtn" class="btn-ghost" type="button">+ Thêm tay</button>
+      </div>
+    </div>
+
+    <div id="pasteBulkPanel" class="paste-bulk-panel hidden">
+      <textarea id="pasteBulkInput" class="paste-textarea" rows="5" placeholder="Texas E2 60 S2M3&#10;Vermeil E1 50&#10;Bibeak E2&#10;Lancet-2 E0 30&#10;(mỗi dòng 1 operator: Tên, sau đó E0/E1/E2, level và skill không bắt buộc)"></textarea>
+      <div class="paste-bulk-actions">
+        <span id="pasteBulkStatus" class="paste-bulk-status"></span>
+        <button id="pasteBulkImportBtn" class="btn-ghost btn-ghost-accent" type="button">Import</button>
       </div>
     </div>
 
